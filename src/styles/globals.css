@@ -1,0 +1,3719 @@
+/* Font-Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* =====================
+  # COMMON CSS 
+=======================*/
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    margin: 0;
+}
+
+
+/* Full Container */
+.container-fluid {
+    padding-right: 70px;
+    padding-left: 70px;
+}
+
+/* Form Input */
+.form-control:focus {
+    box-shadow: none;
+    border: 1px solid #72bd2f;
+}
+
+/* Form Label */
+.form-floating>label {
+    background-color: transparent;
+    color: #777;
+    font-size: 16px;
+    transform: translateY(0);
+}
+
+.form-group>select {
+    color: #111;
+    padding: 12px;
+}
+
+.form-select:focus,
+.form-group>select:focus {
+    box-shadow: none;
+    border: 1px solid #72bd2f;
+}
+
+/* Form Checkboxes */
+.form-check label {
+    font-size: 16px;
+    color: #777777;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.form-check input {
+    border: 1px solid #72bd2f;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-top: 0;
+}
+
+.form-check input:checked {
+    background-color: #72bd2f;
+    border-color: #72bd2f;
+}
+
+.form-check input:focus {
+    box-shadow: none;
+    border-color: #72bd2f;
+}
+
+/* Button */
+.btn.btn-primary {
+    background-color: #72bd2f;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    border: 2px solid #72bd2f;
+}
+
+.btn.btn-primary:hover {
+    background-color: #62a329;
+    border-color: #62a329;
+}
+
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #fff;
+    border: 0;
+    box-shadow: 0 12px 48px rgba(26, 33, 52, .11)
+}
+
+.toast .toast-body>i {
+    color: #72bd2f;
+    font-size: 20px;
+}
+
+.gradient-bg {
+    min-height: calc(100vh - 101px);
+    position: relative;
+}
+
+.gradient-bg::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url(/images/gradient-bg.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    z-index: -1
+}
+
+
+/*--------------
+     Navbar 
+---------------*/
+.navbar {
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+/* LOGO */
+.navbar .navbar-brand>img {
+    text-decoration: none;
+    max-width: 200px;
+}
+
+/* Navbar Link  */
+.navbar .nav-item .nav-link {
+    color: #111;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 37px 0;
+    margin-left: 52px;
+    position: relative;
+}
+
+/* Link Underline */
+.navbar .nav-item .nav-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    background-color: #72bd2f;
+    transition: .1s;
+}
+
+
+/* Link Underline */
+.navbar .nav-item .nav-link.active::before {
+    width: 100%;
+    height: 3px;
+    opacity: 1;
+    bottom: 0;
+}
+
+/* Link Underline Animate */
+.navbar .nav-item .nav-link:hover:before {
+    bottom: 0;
+    opacity: 1;
+    height: 3px;
+}
+
+.navbar .navbar-toggler {
+    border: 0;
+}
+
+.navbar .navbar-toggler:focus {
+    border: 0;
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* =======================
+  # Single & Auth Header 
+=========================*/
+
+.light-header {
+    padding: 24px 0;
+    position: absolute;
+    z-index: 99;
+}
+
+/* Header Logo */
+.light-header .logo>img {
+    text-decoration: none;
+    max-width: 200px;
+}
+
+
+.single-header {
+    height: 101px;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    align-items: center;
+    display: flex;
+}
+
+/* Header Logo */
+.single-header .logo>img {
+    text-decoration: none;
+    max-width: 200px;
+}
+
+
+/* ===================
+    Auth Wrapper 
+ ===================== */
+.auth-wrapper {
+    background-color: #fff;
+    background-image: url(/images/auth-bg.jpg);
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+    padding: 40px 0;
+}
+
+/* background Overlay */
+.auth-wrapper::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: rgba(17, 17, 17, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+/* Side Circle Bg */
+.auth-wrapper::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: -15%;
+    width: 50%;
+    z-index: 0;
+    clip-path: circle(70% at 80% 50%);
+    background-color: #fff;
+    background-image: url(/images/Layers.png);
+}
+
+
+/* -------------------
+   Auth Text 
+ ------------------- */
+.auth-wrapper .auth-text {
+    color: #fff;
+}
+
+.auth-text span {
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.auth-text h1 {
+    font-size: 104px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.auth-text p {
+    font-size: 18px;
+    letter-spacing: 1;
+    max-width: 410px;
+    margin-bottom: 15px;
+}
+
+/* Button */
+.auth-text .form-switch-btns .btn.btn-primary {
+    color: #fff;
+    height: 60px;
+    padding: 14px 50px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.form-switch-btns .btn.btn-primary:hover {
+    color: #000;
+    transform: .4s;
+}
+
+/* Button Active */
+.auth-text .form-switch-btns .btn.btn-primary.active {
+    background-color: #fff;
+    color: #111;
+    cursor: auto;
+}
+
+/* Hover Bg-Fill */
+.form-switch-btns .btn.btn-primary::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0;
+    transition: .4s;
+    z-index: -1;
+}
+
+/* Hover Bg-Fill Animate */
+.form-switch-btns .btn.btn-primary:hover:before {
+    width: 100%;
+    opacity: 1;
+}
+
+
+/* -------------------
+   Auth Form 
+------------------- */
+.auth-wrapper .auth-form {
+    width: 480px;
+    padding: 70px 65px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Title */
+.auth-form .form-title {
+    padding-bottom: 60px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Forget Password */
+.auth-form .forgetpass {
+    font-size: 15px;
+    color: #afb0c0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.auth-form .forgetpass:hover {
+    color: #72bd2f;
+}
+
+/* Social Login */
+.social-login-wrapper .social-login-head {
+    position: relative;
+    z-index: 1;
+    margin: 30px 0;
+}
+
+.social-login-wrapper .social-login-head::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 49%;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-index: -1;
+}
+
+.social-login-wrapper .social-login-head span {
+    background-color: #fff;
+    padding: 0 16px;
+    z-index: 9;
+    max-width: fit-content;
+    font-size: 15px;
+    font-weight: 700;
+    color: #777;
+}
+
+/* Icon Background */
+.social-login-wrapper .social-icons-wrap a {
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0 7px;
+}
+
+/* Facebook-bg */
+.social-login-wrapper .social-icons-wrap a.fb {
+    background-color: #3763d2;
+}
+
+/* Twitter-bg */
+.social-login-wrapper .social-icons-wrap a.tw {
+    background-color: #1abcff;
+}
+
+/* Instagram-bg */
+.social-login-wrapper .social-icons-wrap a.ig {
+    background-color: #7b5dfa;
+}
+
+/* Tiktok-bg */
+.social-login-wrapper .social-icons-wrap a.tt {
+    background-color: #f00044;
+}
+
+/* Social Icon */
+.social-login-wrapper .social-icons-wrap a>svg {
+    color: #fff;
+    transition: .2s;
+}
+
+.social-login-wrapper .social-icons-wrap a:hover svg {
+    transform: rotate(10deg) scale(1.2);
+}
+
+
+
+/* Register Help Text */
+.auth-form .form-help-text {
+    font-size: 14px;
+    color: #111;
+    margin-top: 40px;
+}
+
+.auth-form .form-help-text>a {
+    color: #72bd2f;
+}
+
+.auth-form .send-updates label {
+    font-size: 14px;
+}
+
+.auth-form .send-updates label>a {
+    color: #777;
+}
+
+
+/* Submit Button */
+.auth-form .btn.btn-primary {
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 24px;
+    position: relative;
+    border: 0;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.auth-form .btn.btn-primary:hover {
+    padding-left: 65px;
+}
+
+.auth-form .btn.btn-primary::before {
+    content: "GO!";
+    position: absolute;
+    font-size: 16px;
+    line-height: 50px;
+    left: -65px;
+    bottom: 0;
+    width: 60px;
+    height: 100%;
+    background-color: #111;
+    color: #fff;
+    transition: .4s;
+}
+
+.auth-form .btn.btn-primary:hover:before {
+    left: 0;
+}
+
+
+
+/* =============================
+    Forgot-Password Page CSS
+===============================*/
+.reset-password-wrapper,
+.forgot-email-wrapper,
+.forgot-password-wrapper {
+    padding: 90px 0 50px 0;
+}
+
+.reset-password-wrapper .reset-password-box,
+.forgot-email-wrapper .forgot-email-box,
+.forgot-password-wrapper .forgot-password-box {
+    max-width: 470px;
+    border-radius: 10px;
+    box-shadow: 0 12px 48px rgba(26, 33, 52, .12);
+    padding: 40px 32px;
+    background-color: #fff;
+}
+
+.reset-password-box h1,
+.forgot-email-box h1,
+.forgot-password-box h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.reset-password-box .form-group label,
+.forgot-email-box .form-group label,
+.forgot-password-box .form-group label {
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: #777;
+}
+
+.reset-password-box .input-group .input-group-text {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.forgot-password-wrapper .form-help-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #777;
+    padding-bottom: 32px;
+}
+
+.forgot-password-box .btn.btn-primary {
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 32px;
+    padding: 10px;
+}
+
+.forgot-password-box .alert-success-container {
+    background-color: #71bd2f2f;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.forgot-password-box .alert-success-container i {
+    color: #72bd2f;
+    font-size: 24px;
+}
+
+.forgot-password-box .alert-success-container .text {
+    color: #111;
+    font-size: 14px;
+    line-height: 22px;
+    padding-left: 14px;
+}
+
+.forgot-password-box .input-group-text {
+    background-color: #fff;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 100%;
+    cursor: pointer;
+    border-left: 0
+}
+
+
+/* =============================
+    Forgot-Email Page CSS
+===============================*/
+
+.forgot-email-box h1 {
+    margin: 24px 0;
+    font-size: 18px;
+}
+
+.forgot-email-box h5 {
+    font-size: 16px;
+    color: #444;
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.forgot-email-box p {
+    font-size: 16px;
+    color: #777;
+    line-height: 24px;
+}
+
+.forgot-email-box ul li {
+    font-size: 16px;
+    color: #777;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+/* Reset Password */
+
+.reset-password-box .form-group .form-control {
+    padding: 12px;
+}
+
+.reset-password-box .form-group label {
+    color: #777;
+}
+
+.reset-password-box .btn.btn-primary {
+    border-radius: 5px;
+    height: 50px;
+}
+
+
+/* ======================= 
+    Report Bug Box
+==========================*/
+
+.popup-container {
+    position: relative;
+}
+
+.popup-container .plus-icon {
+    font-size: 24px;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: .2s;
+}
+
+.popup-container .plus-icon:hover {
+    transform: scale(1.1);
+}
+
+.popup-container .report-bug-box {
+    display: none;
+    background-color: #fff;
+    z-index: 99;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 470px;
+    max-width: 470px;
+    border-radius: 10px;
+    box-shadow: 0 12px 48px rgba(26, 33, 52, .2);
+    padding: 50px 32px;
+}
+
+.report-bug-box #popupClose {
+    color: #777;
+    font-size: 20px;
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    box-shadow: 0 12px 48px rgba(26, 33, 52, .12);
+}
+
+.report-bug-box #popupClose:hover {
+    color: #111;
+}
+
+.popup-container .report-bug-box h1 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.popup-container .report-bug-box .form-group label {
+    color: #777;
+}
+
+.popup-container .report-bug-box .form-group .form-control {
+    padding: 12px;
+}
+
+.popup-container .report-bug-box .btn.btn-primary {
+    margin-top: 24px;
+    border-radius: 5px;
+    height: 50px;
+}
+
+
+
+
+
+
+/* =========================
+  # Select Screening-Page 
+===========================*
+
+/* --------------------------
+  Select-Screening Section 
+----------------------------*/
+.select-screening {
+    padding: 50px 0;
+    min-height: calc(100vh - 102px);
+}
+
+/* -------------
+ Screening Left 
+---------------*/
+.select-screening .screening-left {
+    max-width: 82%;
+}
+
+.screening-left h1 {
+    font-size: 48px;
+    color: #111;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.screening-left h1 span {
+    color: #72bd2f;
+}
+
+.screening-left p {
+    font-size: 20px;
+    color: #777;
+    line-height: 1.8;
+    margin-top: 16px;
+}
+
+/* Clients Css */
+.screening-left .client-area {
+    margin-top: 54px;
+}
+
+/* Client Head */
+.screening-left .client-area h5 {
+    font-size: 18px;
+    color: #111;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Text Divider */
+.screening-left .or-divider {
+    position: relative;
+    z-index: 1;
+    margin: 32px 0;
+}
+
+.screening-left .or-divider::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 49%;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-index: -1;
+}
+
+.screening-left .or-divider span {
+    background-color: #fff;
+    z-index: 9;
+    color: #777;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Screening Button */
+.screening-left .btn.btn-primary,
+.screening-right .btn.btn-primary {
+    height: 70px;
+    border: 0;
+    font-size: 15px;
+}
+
+/* PLay-Icon Css */
+.screening-left .btn.btn-primary>i {
+    padding: 11px 12px;
+    border-radius: 100px;
+    background-color: #376f06;
+    margin-right: 18px;
+    font-size: 14px;
+}
+
+
+/* ----------------
+  Screening Right 
+------------------*/
+.select-screening .screening-right {
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.12);
+    width: 550px;
+    margin-left: auto;
+    padding: 50px 45px;
+}
+
+/* Screening Right Head */
+.screening-right h2 {
+    font-size: 44px;
+    color: #111;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Colored Head */
+.screening-right h2 span {
+    color: #72bd2f;
+}
+
+/* Screening Right Button */
+.screening-right .btn.btn-primary {
+    margin-top: 40px;
+}
+
+/* Screening Row */
+.screening-right .row {
+    min-height: 360px;
+}
+
+/* Screening Box Css */
+.screening-right .screening-box {
+    border-radius: 20px;
+    background-color: #fff;
+    border: 2px solid #f5f5f5;
+    text-align: center;
+    padding: 30px 12px 0;
+    min-height: 152px;
+    cursor: pointer;
+}
+
+.screening-right .screening-box:hover {
+    border-color: #72bd2f;
+}
+
+/* Box-Selected Css */
+.screening-right .screening-box.selected {
+    border-color: #72bd2f;
+    transition: .2s;
+}
+
+/* Box Icon */
+.screening-right .screening-box .img-fluid {
+    width: 65px;
+}
+
+/* Box Head */
+.screening-right .screening-box h5 {
+    font-size: 12px;
+    color: #111;
+    margin-top: 16px;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
+/* Carosuel Indicator */
+.carousel-indicators {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+/* Carousel Dots */
+.carousel-indicators [data-bs-target] {
+    transition: 0.3s ease;
+    border-radius: 50%;
+    background-color: #ccc;
+    width: 13px;
+    height: 13px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 0;
+}
+
+/* Carousel Dot Active */
+.carousel-indicators .active {
+    background-color: #72bd2f;
+}
+
+
+
+
+
+
+/* =====================================
+   # Screening-Process Page Css
+======================================*/
+.screening-process {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Left background Image */
+.screening-text-wrap .screening-text-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+}
+
+/* General Screening BG */
+.screening-text-wrap .screening-text-bg.general-bg {
+    background-image: url("/images/general-screening-bg.jpg");
+}
+
+/* Employement Screening BG */
+.screening-text-wrap .screening-text-bg.employement-bg {
+    background-image: url("/images/employement-screening-bg.jpg");
+}
+
+/* Martial  Screening BG */
+.screening-text-wrap .screening-text-bg.martial-bg {
+    background-image: url("/images/general-screening-bg.jpg");
+}
+
+/* Ministerial Screening BG */
+.screening-text-wrap .screening-text-bg.ministerial-bg {
+    background-image: url("/images/employement-screening-bg.jpg");
+}
+
+/* Home Screening BG */
+.screening-text-wrap .screening-text-bg.home-bg {
+    background-image: url("/images/home-screening-bg.jpg");
+}
+
+/* Godswil Screening BG */
+.screening-text-wrap .screening-text-bg.godswill-bg {
+    background-image: url("/images/godswill-screening-bg.jpg");
+}
+
+/* Request-pray Screening BG */
+.screening-text-wrap .screening-text-bg.requestpray-bg {
+    background-image: url("/images/requestpray-screening-bg.jpg");
+}
+
+
+/* Text Heading */
+.screening-text-wrap h1 {
+    font-size: 60px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Text Para */
+.screening-text-wrap p {
+    font-size: 21px;
+    color: #fff;
+    line-height: 1.7;
+    margin-top: 20px;
+    max-width: 75%;
+}
+
+/* Screening Form Css */
+.screening-process .screening-form-wrap {
+    background-color: #fff;
+    padding: 60px 50px 0 140px;
+}
+
+/* Cancel-Form Button */
+.screening-form-wrap .cancel-form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 30px;
+}
+
+/* Cancel-Form Icon */
+.screening-form-wrap .cancel-form>i {
+    color: #111;
+    font-size: 24px;
+}
+
+/* Form Main Heading */
+.screening-form-wrap h2 {
+    font-size: 50px;
+    color: #72bd2f;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Screening Main Form */
+.screening-form-wrap .screening-form {
+    height: 710px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+
+/* Custom scrollbar */
+.screening-form::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Custom scrollbar Track */
+.screening-form::-webkit-scrollbar-track {
+    background-color: #ccc;
+    border-radius: 50px;
+}
+
+/* Custom scrollbar Thumb */
+.screening-form::-webkit-scrollbar-thumb {
+    background-color: #72bd2f;
+    border-radius: 5px;
+}
+
+
+/* Screening Form Head */
+.screening-form-wrap .screening-form .form-head {
+    margin-bottom: 32px;
+}
+
+
+.screening-form-wrap .screening-form h3 {
+    font-size: 27px;
+    color: #777;
+    font-weight: bold;
+}
+
+.screening-form-wrap .screening-form h3>span {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.screening-form-wrap .screening-form .sub-head {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Form Label */
+.screening-form-wrap .form-group>label {
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #777777;
+}
+
+/* Form Input & Select */
+.screening-form-wrap .form-group>select,
+.screening-form-wrap .form-group>input {
+    border-radius: 50px;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    color: #111;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* File Uploader Section */
+.screening-form .upload-file-box {
+    border: 2px dashed #777;
+    text-align: center;
+    padding: 36px;
+    border-radius: 10px;
+}
+
+.screening-form .upload-file-box p {
+    font-size: 14px;
+    color: #777777;
+    font-weight: bold;
+}
+
+.screening-form .upload-file-box p a {
+    color: #72bd2f;
+}
+
+/* Question Section */
+.screening-form .question-section h5 {
+    font-size: 18px;
+    color: #111;
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+
+.screening-form .question-section .sample-question {
+    color: #111;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+}
+
+/* Question Limit */
+.question-section .question-limit ul li {
+    font-size: 15px;
+    color: #777777;
+    font-weight: bold;
+}
+
+.screening-form textarea::placeholder {
+    border: 0;
+    color: #777;
+    font-size: 15px;
+}
+
+.screening-form textarea {
+    border: 0;
+    width: 100%;
+    resize: none;
+    height: 30px;
+    margin: 16px;
+}
+
+.screening-form textarea:focus {
+    border: 0;
+    outline: 0;
+}
+
+/* Add Question Btn */
+.screening-form .question-section .add-question-btn {
+    background-color: transparent;
+    color: #72bd2f;
+    font-weight: 600;
+    border: 0;
+    padding: 0;
+}
+
+/* Screening Form Button */
+.screening-process .btn.btn-primary {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 70px;
+    width: 50%;
+    border-radius: 0;
+    z-index: 99;
+}
+
+
+
+
+
+
+/* ======================
+    # Sidebar Styling
+========================*/
+.dashboard-wrapper .sidebar {
+    left: 0;
+    top: 100px;
+    bottom: 0;
+    width: 445px;
+    padding: 100px 52px 50px 66px;
+    background-color: #fff;
+    border-top: 8px solid #72bd2f;
+    box-shadow: 0 4px 16px 0 rgba(96, 101, 123, .14);
+    overflow: auto;
+    position: fixed;
+    z-index: 99;
+    transition: left .5s;
+}
+
+/* Open Sidebar Button */
+.open-sidebar {
+    border: 0;
+    background-color: transparent;
+}
+
+/* Open Sidebar Icon */
+.navbar .navbar-toggler i,
+.open-sidebar>i {
+    font-size: 26px;
+    color: #111;
+}
+
+/* Clode-Sidebar Button */
+.sidebar .close-sidebar-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+/* Clode-Sidebar Icon */
+.sidebar .close-sidebar-btn>a>i {
+    font-size: 26px;
+    color: #111;
+}
+
+/* Userinfo */
+.sidebar .user-info {
+    padding-bottom: 36px;
+    border-bottom: 1px solid #777;
+}
+
+.sidebar .user-info .username {
+    font-size: 16px;
+    font-weight: bold;
+    color: #111;
+    line-height: 1.2;
+}
+
+.sidebar .user-info .useremail {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.2;
+    padding-top: 8px;
+}
+
+/* SideBar-Menu Wrap */
+.sidebar .sidebar-menu-wrap {
+    padding-top: 60px;
+}
+
+/* SideBar-Menu Heading */
+.sidebar .sidebar-menu-wrap h2 {
+    font-size: 12px;
+    color: #777777;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* Sidebar Menu Link */
+.sidebar-menu-wrap .sidebar-menu ul li a {
+    display: block;
+    width: 100%;
+    padding: 12px 24px;
+    margin-bottom: 24px;
+    background-color: #fff;
+    color: #777;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    line-height: 30px;
+}
+
+.sidebar-menu-wrap .sidebar-menu ul li a:hover {
+    background-color: #71bd2f1a;
+}
+
+.sidebar-menu-wrap .sidebar-menu ul li a.active {
+    color: #fff;
+    background-color: #72bd2f;
+    border: 1px solid #72bd2f;
+}
+
+.sidebar-menu-wrap .sidebar-menu ul li a.active img {
+    filter: brightness(100%);
+}
+
+.sidebar-menu-wrap .sidebar-menu ul li a img {
+    width: 30px;
+    margin-right: 20px;
+    filter: brightness(45%);
+}
+
+
+
+
+
+
+
+
+/* ======================================
+  # Dashboard Main / Account-Setting
+=========================================*/
+
+.dashboard-wrapper .layout-main {
+    max-width: 1190px;
+    margin-left: -30px;
+    padding-top: 204px;
+    padding-bottom: 60px;
+}
+
+/* Main Heading */
+.layout-main h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #111;
+    line-height: 1.2;
+}
+
+/* Account Profile Section */
+.layout-main .profile-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px 0 rgba(96, 101, 123, .14);
+}
+
+/* Profile Section Heading */
+.layout-main .profile-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #111;
+    line-height: 1.2;
+}
+
+/* Profile Item */
+.layout-main .profile-section .profile-item {
+    margin-top: 46px;
+}
+
+/* Profile Item Type */
+.layout-main .profile-section p {
+    font-size: 14px;
+    color: #777777;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+/* Profile User-data */
+.layout-main .profile-section p.user-data {
+    font-size: 16px;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 0;
+}
+
+/* Profile Update Button */
+.layout-main .profile-section .update-btn {
+    font-size: 14px;
+    font-weight: bold;
+    color: #72bd2f;
+    line-height: 1.2;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f1f8ea;
+    border: 0;
+    margin-left: 24px;
+}
+
+
+/* ------------------------
+   Delete Account Section 
+---------------------------*/
+.layout-main .delete-ac-section {
+    padding: 32px;
+    box-shadow: 0 12px 48px rgba(26, 33, 52, .11);
+    border-radius: 10px;
+}
+
+/* Heading Link */
+.layout-main .delete-ac-section h3>a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d31332;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+/* Section text */
+.layout-main .delete-ac-section p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.2;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+/* ====================
+   # MODALS CSS 
+=======================*/
+.update-info-modal .modal-content {
+    padding: 36px 0 0;
+    box-shadow: 0 4px 16px 0 rgba(96, 101, 123, .14);
+}
+
+.update-info-modal .modal-header,
+.update-info-modal .modal-body,
+.update-info-modal .modal-footer {
+    padding: 0 32px;
+}
+
+/* Modal Header */
+.update-info-modal .modal-header {
+    margin-bottom: 30px;
+    border-bottom: 0;
+}
+
+/* Modal Footer */
+.update-info-modal .modal-footer {
+    background-color: #f2fce9;
+    padding: 14px 32px;
+    border: 0;
+    margin-top: 55px;
+}
+
+/* Modal Heading */
+.update-info-modal .modal-header h1 {
+    color: #111;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Form Control Input Css */
+.update-info-modal .modal-body .form-control {
+    padding: 18px 16px;
+}
+
+/* .update-info-modal .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+} */
+
+/* Input-Password Eye */
+.update-info-modal .input-group .input-group-text {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Modal Upper Text */
+.update-info-modal .modal-body .modal-upper-text {
+    font-size: 14px;
+    color: #777;
+    margin-top: -12px;
+}
+
+/* Modal Button */
+.update-info-modal .modal-footer .btn.btn-primary {
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 9px;
+}
+
+/* Modal Cancel Button */
+.update-info-modal .modal-footer .btn.btn-link {
+    color: #72bd2f;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* Modal Cancel-Button Hover*/
+.update-info-modal .modal-footer .btn.btn-link:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+/*==============================
+   Delete Account Page
+==============================*/
+
+/* Delete a/c Wrapper */
+.delete-account-wrapper {
+    padding: 90px 0;
+}
+
+/* Delete Box Styling */
+.delete-account-wrapper .delete-account-box {
+    max-width: 480px;
+    padding: 40px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 12px 48px rgba(26, 33, 52, .11);
+}
+
+/* Box Heading */
+.delete-account-wrapper .delete-account-box h1 {
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #111;
+    font-weight: bold;
+}
+
+/* Form Floating Style */
+.delete-account-wrapper .delete-account-box .form-floating {
+    margin-bottom: 28px;
+}
+
+.delete-account-box .form-floating .password-toggle {
+    height: 100%;
+    background-color: #fff;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+}
+
+/* Box Button */
+.delete-account-wrapper .delete-account-box .btn.btn-primary {
+    margin-top: 24px;
+    border-radius: 5px;
+    height: 50px;
+}
+
+/* Box Bottom Text */
+.delete-account-wrapper .delete-account-box .bottom-text {
+    font-size: 12px;
+    color: #777777;
+    line-height: 1.6;
+    padding-top: 24px;
+}
+
+/* Box Bottom Text Link */
+.delete-account-wrapper .delete-account-box .bottom-text>a {
+    color: #777;
+}
+
+.delete-account-wrapper .delete-account-box small {
+    font-size: 12px;
+}
+
+
+
+/* ==================
+    Steps Wrapper  
+====================*/
+.steps-wrapper {
+    width: 400px;
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99
+}
+
+.steps-wrapper .progressbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    position: relative;
+}
+
+.steps-wrapper .progressbar::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 45px;
+    transform: translateX(-60%);
+    width: 120px;
+    height: 2px;
+    background-color: #ccc;
+}
+
+.steps-wrapper .progressbar li {
+    position: relative;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.progressbar .step-number {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 30px;
+    border-radius: 100px;
+    color: #72bd2f;
+    border: 2px solid #72bd2f;
+    background-color: transparent;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.progressbar .step-text {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.progressbar li.active .step-number {
+    background-color: #72bd2f;
+    color: #fff;
+}
+
+
+
+
+/*==============================
+   Plan Selection Page
+==============================*/
+
+/* Plan Wrapper */
+
+.plan-selection .plans-wrapper {
+    max-width: 710px;
+    padding: 70px 0;
+}
+
+/* Page Heading */
+.plan-selection .plans-wrapper h1 {
+    color: #111;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.plans-wrapper .plan-items {
+    margin-top: 60px;
+}
+
+/* Plan main Head */
+.plans-wrapper .plan-items h2 {
+    font-size: 12px;
+    color: #777777;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+/* Plan Box */
+.plans-wrapper .plan-items .plan {
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 12px 48px rgba(26, 33, 52, .11);
+}
+
+/* Plan title */
+.plan-items .plan .upper-block {
+    padding: 17px 22px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.plan .upper-block .popular-plan-box {
+    background-color: #72bd2f;
+    padding: 3px 5px;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.plan .upper-block .saving-block {
+    font-size: 11px;
+    font-weight: 500;
+    color: #72bd2f;
+    background-color: #eaf5e0;
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+.plan-items .plan h3 {
+    font-size: 18px;
+    color: #111;
+    font-weight: bold;
+}
+
+/* Plan Icon */
+.plan-items .plan h3>img {
+    background-color: #e3f2d5;
+    border-radius: 5px;
+    padding: 6px;
+    width: 28px;
+    margin-right: 12px;
+}
+
+/* Plan Main Block */
+.plan-items .plan .main-block {
+    min-height: 98px;
+    padding: 0 20px;
+}
+
+/* Price Value */
+.plan .price .value {
+    font-size: 24px;
+    color: #111;
+    font-weight: bold;
+}
+
+/* Price Duration */
+.plan .price .duration {
+    font-size: 16px;
+    color: #777777;
+    line-height: 1.5;
+}
+
+.plan .price p {
+    font-size: 12px;
+    color: #777777;
+    line-height: 2;
+}
+
+/* Donate Btn */
+.plan .btn-block .btn.btn-primary {
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 3px 8px;
+}
+
+/* Username style */
+.username {
+    font-size: 14px;
+    font-weight: bold;
+    color: #111;
+}
+
+
+
+
+
+/*==============================
+   Payment Completion Page
+==============================*/
+
+/* Payment Step Wrapper */
+.payment-page .payment-main-wrapper {
+    max-width: 570px;
+    padding: 70px 0;
+    position: relative;
+}
+
+/* Payment Header */
+.payment-main-wrapper .payment-header .go-back-btn {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 0;
+    border: 0;
+    border-radius: 100px;
+    color: #72bd2f;
+    font-size: 30px;
+    background-color: #eaf5e0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+}
+
+.payment-main-wrapper .payment-header .go-back-btn:hover {
+    background-color: #72bd2f;
+    color: #fff;
+}
+
+.payment-header .header-content span {
+    font-size: 16px;
+    color: #777;
+}
+
+.payment-header .header-content h1 {
+    font-size: 32px;
+    color: #111111;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Order Summary Wrap */
+.payment-main-wrapper .order-summary-wrap {
+    margin: 50px 0 32px 0;
+}
+
+.payment-main-wrapper .order-summary-wrap span {
+    font-size: 11px;
+    color: #777777;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Basic Container */
+.payment-main-wrapper .basic-container {
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 25px 40px;
+    box-shadow: 0 16px 48px rgba(26, 33, 52, .11)
+}
+
+.order-summary-wrap .summary-row {
+    justify-content: space-between;
+    display: flex;
+}
+
+.order-summary-wrap .divider {
+    border-top: 1px solid #777;
+    margin: 12px 0;
+}
+
+.order-summary-wrap .summary-row .summary-text {
+    font-size: 14px;
+    color: #444444;
+}
+
+/* Payment Form Wrap / Tabs */
+.payment-form-wrap .nav {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    border: 0;
+}
+
+.payment-form-wrap .nav .nav-item {
+    padding: 7px;
+    width: 50%;
+}
+
+.payment-form-wrap .nav .nav-item .nav-link {
+    width: 100%;
+    border: 0;
+    color: #111;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.payment-form-wrap .nav .nav-item .nav-link.active {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 1px 10px 0px rgba(136, 136, 136, 0.2);
+}
+
+.payment-form-wrap .payment-form {
+    padding-top: 32px;
+}
+
+.payment-form .form-group label {
+    font-size: 16px;
+    color: #777777;
+    margin-bottom: 6px;
+}
+
+.payment-form .form-group .form-control {
+    padding: 12px;
+}
+
+.payment-form .input-group .input-group-text {
+    background-color: #fff;
+}
+
+.payment-form-wrap .payment-form .btn.btn-primary {
+    border-radius: 10px;
+    height: 50px;
+    margin-top: 16px;
+}
+
+.payment-form .transaction-declined-alert span {
+    color: #ff0000;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.payment-form .form-group.transaction-declined-alert .form-control {
+    border-color: #fe0000;
+}
+
+
+
+/* ------------------------
+    Select card wrap
+-------------------------*/
+.payment-form-wrap .payment-form.select-card-wrap {
+    padding-top: 24px;
+}
+
+.select-card-wrap .select-card-head {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+.select-card-wrap .select-card-head::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 48%;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-index: -1;
+}
+
+.select-card-wrap .select-card-head span {
+    color: #777;
+    font-size: 14px;
+    background-color: #fff;
+    z-index: 9;
+    padding: 0 12px;
+}
+
+.select-card-wrap .payment-card {
+    padding: 3px 16px 0;
+    border: 1px solid #777;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.select-card-wrap .payment-card:hover {
+    border: 1px solid #72bd2f;
+}
+
+
+.select-card-wrap .payment-card .card-details img {
+    width: 48px;
+}
+
+.select-card-wrap .payment-card .card-details span {
+    font-size: 14px;
+    color: #777;
+}
+
+.select-card-wrap .payment-card .card-details i {
+    font-size: 26px;
+    cursor: pointer;
+    color: #f54136;
+    padding: 1px 6px;
+    transition: .1s;
+}
+
+.select-card-wrap .payment-card .card-details i:hover {
+    background-color: #f53f36;
+    color: #fff;
+    border-radius: 100px;
+}
+
+.select-card-wrap .payment-card .card-active-block {
+    padding-bottom: 20px;
+    padding-top: 16px;
+}
+
+.payment-card .card-active-block>.btn.btn-primary {
+    margin-top: 24px;
+}
+
+.payment-card .card-active-block>.btn.btn-primary.grey-btn {
+    background-color: #777;
+    border-color: #777;
+}
+
+.payment-form-wrap .select-card-wrap>.btn.btn-primary {
+    height: 50px;
+    padding: 10px;
+    margin-top: 32px;
+}
+
+
+
+
+
+/* Payment Successful Styles */
+.payment-successful {
+    padding: 70px 0;
+}
+
+/* Success Box */
+.payment-successful .success-box {
+    position: relative;
+    background-color: #fff;
+    padding: 60px;
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 12px 48px rgba(26, 33, 52, .12)
+}
+
+.payment-successful .success-box .go-back {
+    color: #777;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 32px;
+    transition: .3s;
+}
+
+.payment-successful .success-box .go-back:hover {
+    color: #444;
+}
+
+.payment-successful .success-box .success-icon {
+    margin-bottom: 36px;
+}
+
+.payment-successful .success-box .success-icon>img {
+    width: 120px;
+    height: 116px;
+}
+
+.payment-successful .success-box h1 {
+    font-size: 28px;
+    color: #72bd2f;
+    font-weight: bold;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.payment-successful .success-box h3 {
+    font-size: 22px;
+    color: #444;
+    font-weight: bold;
+    padding-top: 26px;
+    padding-bottom: 12px;
+}
+
+.payment-successful .success-box p {
+    color: #444;
+    font-size: 16px;
+}
+
+.payment-successful .social-icon-row {
+    padding-top: 24px;
+    padding-bottom: 28px;
+}
+
+.payment-successful .social-icon-row .social-icon {
+    padding-right: 38px;
+}
+
+.payment-successful .social-icon-row .social-icon>img {
+    transition: .3s;
+}
+
+.payment-successful .social-icon-row .social-icon>img:hover {
+    transform: scale(0.9);
+}
+
+
+.payment-successful .social-icon-row .social-icon:last-child {
+    padding-right: 0;
+}
+
+.payment-successful .success-box .link-box {
+    margin-top: 16px;
+    height: 50px;
+}
+
+.success-box .link-box button {
+    border: 0;
+    background: #fff;
+    padding: 0;
+    height: 100%;
+    padding: 12px;
+    border-radius: 0 5px 5px 0;
+    transition: .3s;
+}
+
+.success-box .link-box button:hover {
+    background-color: #eee;
+}
+
+
+
+
+
+/* ========================
+  Donation-Plan Page
+=========================== */
+
+.dashboard-wrapper .donation-plan {
+    max-width: 732px;
+}
+
+.donation-plan .para-group {
+    margin-bottom: 46px;
+    margin-top: 28px;
+}
+
+.donation-plan .para-group p {
+    font-size: 17px;
+    color: #777777;
+}
+
+.plan-box-wrapper .donation-plan-box {
+    padding: 50px 24px 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px 0 rgba(96, 101, 123, .14);
+}
+
+.plan-box-wrapper .donation-plan-box .top-head {
+    font-size: 12px;
+    color: #777777;
+    line-height: 1.5;
+}
+
+.plan-box-wrapper .donation-plan-box h2 {
+    margin-top: 14px;
+    font-size: 28px;
+    color: #111;
+    font-weight: bold;
+}
+
+.plan-box-wrapper .donation-plan-box h2>span {
+    font-size: 18px;
+}
+
+.plan-box-wrapper .donation-plan-box .divider {
+    margin: 24px 0;
+    border-top: 1px solid #ccc;
+}
+
+.plan-box-wrapper .donation-plan-box p {
+    font-size: 15px;
+    color: #777777;
+    line-height: 1.6;
+    margin-bottom: 26px;
+}
+
+.donation-plan-box .plan-feature {
+    min-height: 240px;
+}
+
+.donation-plan-box .plan-feature ul li {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: baseline;
+}
+
+.donation-plan-box .plan-feature ul li i {
+    color: #72bd2f;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.donation-plan-box .plan-feature ul li span {
+    display: block;
+    line-height: 1.5;
+    color: #111;
+}
+
+.donation-plan-box .btn.btn-primary {
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px 0;
+    margin-top: 16px;
+}
+
+
+
+/* ==========================
+    Invoice Blank Page
+=========================== */
+
+.dashboard-wrapper .layout-main.invoice-blank {
+    padding-top: 160px;
+}
+
+.invoice-blank .invoice-box {
+    min-height: 365px;
+    padding: 0 40px;
+    max-width: 1170px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px 0 rgba(96, 101, 123, .14);
+    position: relative;
+}
+
+.invoice-blank .invoice-box .img-container {
+    position: absolute;
+    right: 60px;
+    bottom: 0;
+}
+
+.invoice-box .text-container h1 {
+    font-size: 28px;
+    color: #111;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+
+.invoice-box .text-container p:nth-child(2) {
+    font-size: 18px;
+    color: #777;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.invoice-box .text-container p:nth-child(3) {
+    font-size: 16px;
+    color: #777;
+}
+
+
+/* ==========================
+    Invoice Active Page
+=========================== */
+
+.dashboard-wrapper .layout-main.invoice-active {
+    padding-top: 170px;
+}
+
+.invoice-active .invoice-box {
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px 0 rgba(96, 101, 123, .14);
+}
+
+.invoice-active .invoice-box h1 {
+    font-size: 28px;
+    color: #111;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 18px 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+.invoice-active .invoice-box table>thead {
+    background-color: #d4ebc0;
+}
+
+.invoice-active .invoice-box table>thead>tr>th {
+    font-size: 14px;
+    color: #111;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.invoice-active .invoice-box table>thead>tr>th:first-child {
+    padding-left: 40px;
+}
+
+.invoice-active .invoice-box table>thead>tr>th:last-child {
+    padding-right: 40px;
+}
+
+.invoice-active .invoice-box table>tbody>tr>td {
+    font-size: 14px;
+    color: #444444;
+    font-weight: bold;
+    text-align: center;
+    padding: 13px 0;
+    border: 0;
+    vertical-align: middle;
+}
+
+.invoice-active .invoice-box table>tbody>tr>td:first-child {
+    padding-left: 40px;
+}
+
+.invoice-active .invoice-box table>tbody>tr>td:last-child {
+    padding-right: 40px;
+}
+
+.invoice-box .invoice-member-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.invoice-box .invoice-member-info .user-pic {
+    width: 38px;
+    height: 38px;
+    margin-right: 10px;
+}
+
+.invoice-box .invoice-member-info h5 {
+    font-size: 16px;
+    color: #444444;
+    font-weight: bold;
+}
+
+.invoice-box .invoice-member-info p {
+    font-size: 12px;
+    color: #444444;
+    font-weight: bold;
+}
+
+.invoice-active .invoice-box .badge {
+    background-color: #72bd2f;
+    font-size: 14px;
+    padding: 14px;
+    width: 140px;
+    border-radius: 10px;
+}
+
+.invoice-active .invoice-box .badge.success {
+    background-color: #72bd2f;
+}
+
+.invoice-active .invoice-box .badge.decline {
+    background-color: #ED2B2A;
+}
+
+.invoice-box table>tbody>tr>td .download-btn {
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: 10px;
+    width: 140px;
+    border-radius: 10px;
+    color: #777;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+.invoice-box table>tbody>tr>td .download-btn:hover {
+    background-color: #777;
+    color: #fff;
+}
+
+.invoice-box table>tbody>tr>td .download-btn i {
+    margin-left: 6px;
+}
+
+
+
+
+
+
+/* ================================
+    Donation-Plan /  Member Page
+================================== */
+.donation-plan-wrapper .donation-plan-member {
+    max-width: 1190px;
+    padding-top: 160px;
+}
+
+.donation-plan-member .member-box {
+    box-shadow: 0 4px 16px 0 rgba(96, 101, 123, .14);
+    border-radius: 10px;
+}
+
+.member-box .header {
+    padding: 32px 50px 70px;
+}
+
+.member-box .header span {
+    padding: 4px 22px;
+    font-size: 12px;
+    border-radius: 100px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #72bd2f;
+}
+
+.member-box .header h1 {
+    font-size: 40px;
+    color: #111;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.member-box .header .card-alert {
+    background-color: #fff2f2;
+    color: #ff2147;
+    font-size: 14px;
+    max-width: 540px;
+    padding: 16px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.member-box .header .card-alert>a {
+    color: #ff2147;
+}
+
+
+.member-box .header .card-alert>img {
+    margin-right: 6px;
+}
+
+.member-box .plan-member-info {
+    padding: 0 50px 70px;
+}
+
+
+.member-box .plan-member-info .status-wrap {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 28px;
+}
+
+.plan-member-info .status-wrap h5 {
+    font-size: 14px;
+    color: #777;
+    font-weight: bold;
+    padding-bottom: 12px;
+}
+
+.plan-member-info .status-wrap .status {
+    font-size: 20px;
+    color: #111;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.plan-member-info .status-wrap .status .due-announcement {
+    color: #ff0c0c;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.plan-member-info .status-wrap .status>i {
+    font-size: 28px;
+    margin-right: 8px;
+}
+
+.plan-member-info .status-wrap .status>i.active {
+    color: #00ba00;
+}
+
+.plan-member-info .status-wrap .status>i.due {
+    color: #ffc048;
+}
+
+.plan-member-info .status-wrap .status>img {
+    margin-right: 6px;
+}
+
+.plan-member-info .inquire-session-wrap {
+    padding: 32px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.plan-member-info .inquire-session-wrap .box {
+    padding: 8px 22px 14px;
+    border-radius: 10px;
+    border: 2px solid #777;
+    text-align: center;
+    width: 120px;
+}
+
+.inquire-session-wrap .box p {
+    font-size: 40px;
+    color: #72bd2f;
+}
+
+.inquire-session-wrap .box span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #777;
+}
+
+.plan-member-info .date-catg {
+    padding-top: 40px;
+}
+
+.plan-member-info .date-catg h5 {
+    color: #777;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.plan-member-info .date-catg .date {
+    color: #72bd2f;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.member-box .button-group {
+    padding: 30px 50px;
+    background-color: #f1f8ea;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.member-box .button-group .btn.btn-primary {
+    height: 50px;
+    padding: 10px 32px;
+    border-radius: 5px;
+}
+
+.member-box .button-group .btn.btn-primary.cancel-btn {
+    color: #111;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+
+
+
+
+
+/* ======================
+   Cancel-plan-wrapper
+========================= */
+.cancel-plan-wrapper {
+    padding: 90px 0;
+}
+
+.cancel-plan-wrapper .cancel-plan-box {
+    background-color: #fff;
+    box-shadow: 0 12px 48px rgba(26, 33, 52, .11);
+    padding: 40px 32px;
+    border-radius: 10px;
+}
+
+.cancel-plan-wrapper .cancel-plan-box h1 {
+    color: #111;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.cancel-plan-wrapper .cancel-plan-box p {
+    font-size: 24px;
+    color: #777;
+    font-weight: bold;
+    margin: 24px 0 15px 0;
+}
+
+
+.cancel-plan-wrapper .cancel-plan-box ul li {
+    font-size: 20px;
+    color: #777;
+    font-weight: bold;
+}
+
+.cancel-plan-box ul li::before {
+    content: "\2022";
+    color: #71bd2f;
+    font-size: 1.2em;
+    margin-right: 0.5em;
+}
+
+.cancel-plan-box .button-group {
+    margin-top: 52px;
+}
+
+.cancel-plan-box .button-group .btn.btn-primary {
+    border-radius: 5px;
+    height: 50px;
+    padding: 8px 40px;
+}
+
+.cancel-plan-box .button-group .btn.btn-primary.btn-grey {
+    padding: 12px 24px;
+    background-color: #ccc;
+    color: #111;
+    border-color: #ccc;
+}
+
+
+
+/* =====================
+    Support Page Css
+========================= */
+
+.dashboard-wrapper .layout-main.support-main {
+    padding-top: 160px;
+}
+
+.support-main .support-text-box {
+    overflow: hidden;
+}
+
+.support-main .create-ticket-box,
+.support-main .support-text-box {
+    padding: 40px;
+    box-shadow: 0 4px 16px 0 rgba(96, 101, 123, .14);
+    margin-bottom: 32px;
+    border-radius: 10px;
+    position: relative;
+}
+
+
+.support-main .support-text-box h1 {
+    font-size: 28px;
+    margin-bottom: 48px;
+}
+
+.support-main .support-text-box h3 {
+    font-size: 22px;
+    color: #111;
+    font-weight: 600;
+}
+
+.support-main .support-text-box p {
+    font-size: 17px;
+    color: #111;
+    margin-top: 20px;
+}
+
+/* Support Time and Contact box */
+.support-text-box .support-info {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #72bd2f;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 24px;
+}
+
+.support-main .create-ticket-box h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #111;
+}
+
+.support-main .create-ticket-box p {
+    font-size: 17px;
+    color: #777;
+    margin-top: 18px;
+}
+
+.create-ticket-box .ticket-form-wrapper {
+    max-width: 732px;
+    margin-top: 42px;
+}
+
+.ticket-form .form-group label {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 6px;
+}
+
+.ticket-form .form-group .form-control {
+    padding: 12px 16px;
+}
+
+.ticket-form .btn.btn-primary {
+    height: 50px;
+    width: 170px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+
+/* Support Message Sent */
+.support-message-sent {
+    padding: 70px 0;
+}
+
+/* Success Box */
+.support-message-sent .message-box {
+    position: relative;
+    background-color: #fff;
+    padding: 75px 40px;
+    max-width: 450px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 12px 48px rgba(26, 33, 52, .12)
+}
+
+.support-message-sent .message-box .go-back {
+    color: #777;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 32px;
+    transition: .3s;
+}
+
+.support-message-sent .message-box .go-back:hover {
+    color: #444;
+}
+
+.support-message-sent .message-box .message-icon {
+    margin-bottom: 30px;
+}
+
+.support-message-sent .message-box .message-icon>img {
+    width: 140px;
+}
+
+.support-message-sent .message-box h1 {
+    font-size: 28px;
+    color: #111;
+    font-weight: bold;
+    padding-bottom: 14px;
+}
+
+.support-message-sent .message-box p {
+    color: #444;
+    line-height: 1.8;
+    font-size: 16px;
+    padding-bottom: 58px;
+}
+
+.message-box .btn.btn-primary {
+    border-radius: 10px;
+    height: 50px;
+    padding: 11px;
+}
+
+.message-box .btn.btn-primary.btn-grey {
+    background-color: #fff;
+    color: #777;
+    border: 1px solid #777;
+    margin-top: 16px;
+}
+
+.message-box .btn.btn-primary.btn-grey:hover {
+    background-color: #eee;
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+   Account-Cancel Page Css 
+============================*/
+
+.account-cancel-wrapper {
+    padding: 90px 0;
+}
+
+/* Cancel Box */
+.account-cancel-wrapper .cancel-box {
+    max-width: 450px;
+    text-align: center;
+    padding: 56px 40px 34px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 12px 48px rgba(26, 33, 52, .11)
+}
+
+/* Cancel Check Icon */
+.cancel-box .cancel-check>i {
+    font-size: 85px;
+    color: #72bd2f;
+}
+
+/* Head */
+.account-cancel-wrapper .cancel-box h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #72bd2f;
+    padding-top: 32px;
+}
+
+/* Para */
+.account-cancel-wrapper .cancel-box p {
+    font-size: 18px;
+    color: #444;
+    padding-top: 20px;
+}
+
+/* Button Link */
+.account-cancel-wrapper .cancel-box .btn.btn-primary {
+    border-radius: 10px;
+    height: 50px;
+    padding: 10px;
+    margin-top: 54px;
+}
+
+
+
+
+
+
+/* =======================
+    Feedback Wrapper
+=========================*/
+
+.feedback-wrapper {
+    padding: 90px 0 50px 0;
+}
+
+.feedback-wrapper .feedback-form-box {
+    max-width: 470px;
+    border-radius: 10px;
+    box-shadow: 0 12px 48px rgba(26, 33, 52, .12);
+    padding: 40px 32px;
+}
+
+.feedback-form-box h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.feedback-form-box p {
+    line-height: 24px;
+    color: #777;
+    margin-top: 8px;
+}
+
+.feedback-form-box .emoji-rating {
+    display: flex;
+    padding: 24px 0 32px 0;
+}
+
+.feedback-form-box .emoji-rating .form-check {
+    padding-left: 0;
+    margin-right: 18px;
+}
+
+.feedback-form-box .emoji-rating .form-check-input[type="radio"] {
+    display: none;
+}
+
+.emoji-rating .form-check label {
+    cursor: pointer;
+    margin-left: 0;
+}
+
+.feedback-form-box .emoji-rating label i {
+    font-size: 28px;
+    color: gray;
+    transition: .2s;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 200px;
+    background-color: transparent;
+}
+
+.feedback-form-box .emoji-rating label i:hover {
+    color: #fff;
+}
+
+.feedback-form-box .emoji-rating label i.red:hover {
+    color: #fff;
+    background-color: #E21818;
+}
+
+.feedback-form-box .emoji-rating label i.yellow:hover {
+    color: #fff;
+    background-color: #F2BE22;
+}
+
+.feedback-form-box .emoji-rating label i.green:hover {
+    color: #fff;
+    background-color: green;
+}
+
+
+.feedback-form-box .emoji-rating .form-check-input:checked~label i.red {
+    color: #fff;
+    background-color: #E21818;
+}
+
+.feedback-form-box .emoji-rating .form-check-input:checked~label i.yellow {
+    color: #fff;
+    background-color: #F2BE22;
+}
+
+.feedback-form-box .emoji-rating .form-check-input:checked~label i.green {
+    color: #fff;
+    background-color: green;
+}
+
+.feedback-form-box .form-group label {
+    padding-bottom: 6px;
+    color: #777;
+}
+
+.feedback-form-box .follow-permission-wrap>label {
+    font-weight: bold;
+    color: #111;
+}
+
+.feedback-form-box .btn.btn-primary {
+    padding: 8px 32px;
+    border-radius: 5px;
+}
+
+.feedback-form-box .btn.btn-primary.cancel-btn {
+    background-color: #fff;
+    color: #777;
+    border-color: #777;
+}
+
+.feedback-form-box .btn.btn-primary.cancel-btn:hover {
+    background-color: #eee;
+}
+
+
+
+
+
+
+
+/* ========================
+    # About-Us Styling 
+==========================*/
+
+/* Mission Wrapper */
+.mission-wrapper {
+    background-color: #f5f5f5;
+    padding: 60px 0 90px 0;
+    margin-top: 60px;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+}
+
+.mission-wrapper::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 200px;
+    background-color: #f5f5f5;
+}
+
+/* Heading Styles */
+.story-wrapper h1,
+.mission-wrapper h1 {
+    color: #111111;
+    font-weight: bold;
+    max-width: fit-content;
+    position: relative;
+}
+
+/* Heading Underline */
+.story-wrapper h1:before,
+.mission-wrapper h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 45%;
+    height: 6px;
+    border-radius: 20px;
+    background-color: #72bd2f;
+}
+
+/* Main Paragraph Styles */
+.story-wrapper .main-para,
+.mission-wrapper .main-para {
+    font-weight: bold;
+    font-size: 22px;
+    color: #111;
+    line-height: 1.8;
+    padding-bottom: 32px;
+}
+
+/* Regular Paragraph Styles */
+.story-wrapper p,
+.mission-wrapper p {
+    font-size: 16px;
+    color: #111;
+    line-height: 1.8;
+}
+
+
+/* Video Wrapper */
+.video-wrapper {
+    position: relative;
+}
+
+/* Video Container */
+.video-wrapper .video-container {
+    margin-bottom: 90px;
+}
+
+.video-wrapper .video-container img {
+    border-radius: 20px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.04), 0px 20px 25px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Video-Play-Icon Wrapper */
+.video-wrapper .video-container .play-icon-wrapper {
+    z-index: 1;
+    width: 8rem;
+    height: 8rem;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    background-color: #ffffff33;
+    border-radius: 50%;
+    margin-top: -3.25rem;
+    margin-left: -3.25rem;
+    transition: transform .3s cubic-bezier(.39, .575, .565, 1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.video-wrapper .video-container .play-icon-wrapper:hover {
+    transform: scale(1.1);
+}
+
+.video-wrapper .video-container .play-icon-wrapper:hover .play-icon {
+    transform: scale(0.8);
+}
+
+/* Video-Play-Icon */
+.video-container .play-icon-wrapper .play-icon {
+    z-index: 1;
+    width: 8rem;
+    height: 8rem;
+    transform: scale(0.8);
+    transition: transform .3s cubic-bezier(.39, .575, .565, 1);
+    position: absolute;
+}
+
+/*  Youtube Video Box */
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 50% 0 0 0;
+    /* 16:9 aspect ratio (height/width) */
+}
+
+/*  Youtube Video */
+.embed-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Wrapper Content */
+.story-wrapper .wrapper-content {
+    padding: 90px 0;
+    border-top: 1px solid #777;
+}
+
+
+/* Quote Wrapper */
+.quote-wrapper {
+    background-color: #72bd2f;
+    padding: 40px 0;
+}
+
+/* Quote Text Wrap */
+.quote-wrapper .quote-text {
+    padding-left: 70px;
+}
+
+/* Quote Image */
+.quote-wrapper .quote-text img {
+    width: 100px;
+    padding-bottom: 40px;
+}
+
+/* Quote Text>p*/
+.quote-wrapper .quote-text p {
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+
+
+/* Featurette Section */
+.featurette-section .featurette-wrapper {
+    padding: 80px 0;
+}
+
+.featurette-section .featurette-wrapper.has-bg {
+    background-color: #f5f5f5;
+}
+
+.featurette-section .featurette-wrapper h2 {
+    color: #111;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.featurette-section .featurette-wrapper h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+    width: 45%;
+    height: 6px;
+    border-radius: 20px;
+    background-color: #72bd2f;
+}
+
+.featurette-section .featurette-wrapper p {
+    font-size: 18px;
+    color: #777777;
+    line-height: 1.5;
+}
+
+/* Donation Section */
+.donation-section {
+    position: relative;
+    min-height: 700px;
+    background-color: #72bd2f;
+}
+
+.donation-section .donation-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(/images/donation-disburse-img.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+.donation-section .donation-section-right img {
+    width: 80px;
+    height: 80px;
+}
+
+.donation-section .donation-section-right h2 {
+    font-size: 45px;
+    color: #fff;
+    font-weight: bold;
+    padding: 40px 0 24px 0;
+}
+
+.donation-section .donation-section-right p {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.5;
+    padding-bottom: 40px;
+}
+
+.donation-section .donation-section-right .btn.btn-primary {
+    background-color: #fff;
+    border-radius: 5px;
+    color: #72bd2f;
+    height: 50px;
+    border: 2px solid transparent;
+    padding: 10px 50px;
+}
+
+.donation-section .donation-section-right .btn.btn-primary:hover {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+
+/* Join Team Section */
+.join-team-section {
+    position: relative;
+    margin: 90px 0;
+}
+
+.join-team-section .box-container {
+    position: relative;
+    padding: 45px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.04), 0px 20px 25px 0px rgba(0, 0, 0, 0.1);
+}
+
+.join-team-section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -90px;
+    width: 100%;
+    height: 200px;
+    background-color: #f5f5f5;
+}
+
+.join-team-section h2 {
+    color: #111;
+    font-weight: bold;
+    margin-bottom: 40px;
+    position: relative;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+.join-team-section h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -24px;
+    width: 40%;
+    height: 6px;
+    border-radius: 20px;
+    background-color: #72bd2f;
+}
+
+.join-team-section .box-container p {
+    font-size: 18px;
+    color: #777777;
+    line-height: 1.5;
+    margin-top: 60px;
+    margin-bottom: 45px;
+}
+
+.join-team-section .btn.btn-primary {
+    background-color: #72bd2f;
+    border-radius: 5px;
+    color: #fff;
+    height: 50px;
+    border: 0;
+    padding: 12px 50px;
+}
+
+.join-team-section .btn.btn-primary:hover {
+    background-color: #62a329;
+}
+
+
+
+
+
+
+
+/* ====================================
+    # Donation-Disbursemney Styling 
+======================================*/
+
+/* Donation Hero Section */
+.donation-hero-section {
+    background-color: #f5f5f5;
+    margin-top: 40px;
+    min-height: 500px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.donation-hero-section .Donation-icon {
+    width: 85px;
+    height: 85px;
+}
+
+.donation-hero-section h1 {
+    color: #72bd2f;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 1.5;
+    margin: 28px 0 32px 0;
+}
+
+.donation-hero-section h1 span {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+}
+
+.donation-hero-section h1 span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 14px;
+    width: 100%;
+    height: 9px;
+    background-color: rgba(113, 189, 47, 0.25);
+    z-index: -1;
+}
+
+.donation-hero-section p {
+    font-size: 24px;
+    color: #444444;
+    position: relative;
+    z-index: 2;
+}
+
+.donation-hero-section p::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    height: 1px;
+    width: 80%;
+    background-color: #444;
+    z-index: -1
+}
+
+.donation-hero-section p span {
+    background-color: #f5f5f5;
+    padding: 0 12px;
+}
+
+
+/* Disbursement Section */
+.disbursement-section {
+    padding: 80px 0 100px 0;
+}
+
+/* Common Heading Style */
+.faq-section h2,
+.disbursement-section h2 {
+    font-size: 32px;
+    color: #111111;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+
+.faq-section h2::before,
+.disbursement-section h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -28px;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 6px;
+    background-color: #72bd2f;
+    border-radius: 20px;
+}
+
+/* Common Wrapper Styling */
+.disbursement-section .disbursement-box-wrapper {
+    max-width: 1000px;
+    margin-top: 80px;
+}
+
+/* Disbursement Box */
+.disbursement-box-wrapper .disbursement-box {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0px 12px 32px 0px rgba(0, 0, 0, 0.08);
+    transition: .2s;
+}
+
+.disbursement-box span {
+    font-size: 20px;
+    color: #444444;
+}
+
+.disbursement-box h3 {
+    font-size: 44px;
+    color: #111111;
+    font-weight: bold;
+    padding: 20px 0 28px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+/* List style */
+.disbursement-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+}
+
+.disbursement-box ul li {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.disbursement-box ul li:last-child {
+    padding-bottom: 0;
+}
+
+/* Icon */
+.disbursement-box ul li>i {
+    font-size: 24px;
+    color: #00ba00;
+    margin-right: 10px;
+}
+
+.disbursement-box ul li>p {
+    color: #111111;
+    line-height: 1.5;
+}
+
+
+
+
+/* FAQ Section Styling */
+.faq-section {
+    background-color: #f5f5f5;
+    padding: 80px 0;
+    position: relative;
+}
+
+.faq-section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    height: 70px;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+.faq-section .accordion {
+    padding-top: 80px;
+}
+
+.faq-section .accordion .accordion-item {
+    border: 0;
+    border-radius: 0;
+    padding: 16px 0;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+}
+
+.faq-section .accordion .accordion-item i{
+    transition: .3s;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.faq-section .accordion .accordion-button[aria-expanded="true"] .fa-question-circle {
+        color: #72bd2f;
+        transform: scale(1.1);
+}
+
+.faq-section .accordion .accordion-item:hover .accordion-button i {
+    color: #72bd2f;
+    transform: scale(1.1);
+}
+
+.faq-section .accordion .accordion-button {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    font-size: 18px;
+    color: #111;
+    padding-left: 0;
+}
+
+.faq-section .accordion .accordion-body {
+    background-color: #f5f5f5;
+    color: #111111;
+    line-height: 1.5;
+    padding-top: 0;
+    padding-left: 0;
+}
+
+.faq-section .accordion .accordion-button:focus {
+    box-shadow: none;
+}
+
+
+
+
+/* Cannot-Find-Question Section */
+.cannot-find-question {
+    position: relative;
+    max-width: 1000px;
+    margin-bottom: 70px;
+    padding: 44px 0;
+    border-radius: 10px;
+    background-color: #72bd2f;
+    box-shadow: 0px 12px 32px 0px rgba(0, 0, 0, 0.08);
+}
+
+.cannot-find-question p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.cannot-find-question p>a {
+    font-style: italic;
+    color: #fff;
+}
+
+
+
+
+/* =============================
+    Join Team Wrapper Styling 
+===============================*/
+
+.join-team-wrapper {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.join-team-wrapper .join-form-wrapper {
+    padding: 32px 32px 0;
+}
+
+.join-form-wrapper .form-logo {
+    width: 140px;
+}
+
+.join-form-wrapper h1 {
+    max-width: fit-content;
+    font-size: 42px;
+    color: #111111;
+    font-weight: bold;
+    margin: 28px 0 70px 0;
+    position: relative;
+}
+
+.join-form-wrapper h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+    width: 40%;
+    height: 6px;
+    border-radius: 20px;
+    background-color: #72bd2f;
+}
+
+.join-form-wrapper .form-control {
+    padding: 12px;
+}
+
+.join-form-wrapper .form-label {
+    color: #777;
+}
+
+.join-form-wrapper .btn.btn-primary {
+    height: 50px;
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 60px;
+}
+
+
+
+.join-team-wrapper .form-image {
+    position: relative;
+    background-image: url(/images/join-team-image.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    margin: 24px 0 24px 32px;
+    padding: 32px;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+
+.join-team-wrapper .form-image::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+    backdrop-filter: blur(4px);
+    display: none;
+}
+
+
+.form-image .image-content h2 {
+    font-size: 54px;
+    color: #ffffff;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.form-image .image-content>p {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1.5;
+    padding-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.form-image .image-content .text-box {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(241, 243, 240, 0.2);
+    padding: 12px 16px;
+}
+
+.form-image .text-box img {
+    width: 100px;
+}
+
+.form-image .text-box p {
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.form-image .image-content a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-image .image-content a>svg{
+    transition: .3s;
+}
+
+
+.form-image .image-content a:hover svg {
+    transform: translateX(3px) translateY(-3px);
+}
+
+
+
+
+/* Team Submission Box */
+.team-submission-box {
+    padding: 70px 0;
+}
+
+/* Success Box */
+.team-submission-box .thankyou-box {
+    position: relative;
+    background-color: #fff;
+    padding: 50px 60px;
+    max-width: 450px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 12px 48px rgba(26, 33, 52, .12)
+}
+
+.team-submission-box .thankyou-box .go-back {
+    color: #777;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 20px;
+}
+
+.team-submission-box .thankyou-box .message-icon {
+    margin-bottom: 32px;
+}
+
+.team-submission-box .thankyou-box .message-icon>img {
+    width: 100px;
+}
+
+.team-submission-box .thankyou-box h1 {
+    font-size: 28px;
+    color: #111;
+    font-weight: bold;
+    padding-bottom: 24px;
+}
+
+.team-submission-box .thankyou-box p {
+    color: #444;
+    line-height: 1.8;
+    font-size: 16px;
+    padding-bottom: 60px;
+}
+
+.thankyou-box .btn.btn-primary {
+    border-radius: 5px;
+    height: 50px;
+    padding: 12px
+}
+
+
+
+
+
+
+
+/* ===================================
+    Terms and Conditon Styling 
+=====================================*/
+
+.tc-hero-section {
+    background-color: #f5f5f5;
+    min-height: 400px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+.tc-hero-section span {
+    color: #444444;
+    font-weight: bold;
+}
+
+.tc-content.privacy h2,
+.tc-hero-section h1 {
+    font-size: 48px;
+    color: #72bd2f;
+    font-weight: bold;
+    padding: 24px 0 32px 0;
+}
+
+.tc-hero-section p {
+    font-size: 18px;
+    color: #444444;
+    line-height: 1.5;
+}
+
+
+.tc-content.terms {
+    padding-top: 80px;
+}
+
+.tc-content .color-text {
+    color: #72bd2f;
+    font-weight: bold;
+}
+
+.tc-content .text-block {
+    padding-bottom: 48px;
+}
+
+.tc-content .text-block p {
+    padding-bottom: 24px;
+    font-size: 18px;
+    color: #111111;
+    line-height: 1.5;
+}
+
+.tc-content .text-block p:last-child {
+    padding-bottom: 0;
+}
+
+.tc-content h3 {
+    font-size: 28px;
+    color: #111111;
+    font-weight: bold;
+    padding-bottom: 16px;
+}
+
+.tc-content.privacy h2 {
+    padding: 56px 0;
+    border-top: 1px solid #777;
+}
+
+.tc-content.privacy ul li::marker {
+    color: #72bd2f;
+}
