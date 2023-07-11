@@ -34,7 +34,7 @@ const Header = (props: any) => {
         ((router.pathname === "/login" || router.pathname === "/register") ? <header className="light-header">
           <div className="container-fluid">
             {/* LOGO */}
-            <Link href="select-screening.html" className="logo">
+            <Link href="select-screening" className="logo">
               <Image src="/images/logo.png" width={200} height={68.23} alt="Mysight logo" />
             </Link>
           </div>
@@ -75,7 +75,7 @@ const Header = (props: any) => {
           <Navbar expand="lg" className="">
             <div className="container-fluid">
               {/* LOGO */}
-              <Link href="select-screening.html" className="navbar-brand">
+              <Link href="select-screening" className="navbar-brand">
                 <Image src="/images/logo.png" width={200} height={68.23} alt="Mysight logo" />
               </Link>
               {/* Navbar Toggler */}

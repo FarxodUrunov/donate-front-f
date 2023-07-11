@@ -795,8 +795,8 @@ a {
 }
 
 /* PLay-Icon Css */
-.screening-left .btn.btn-primary>i {
-    padding: 11px 12px;
+.screening-left .btn.btn-primary>span {
+    padding: 8px 12px 10px 14px;
     border-radius: 100px;
     background-color: #376f06;
     margin-right: 18px;

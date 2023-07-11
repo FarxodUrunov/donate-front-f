@@ -10,7 +10,7 @@ const Layout = ({ children }: any) => {
 
     return (
         <div>
-            <Header main={router.pathname === "/login" || router.pathname === "/register" || router.pathname !== "about-us"} />
+            <Header main={router.pathname === "/login" || router.pathname === "/register"} />
             <div className={inter.className}>{children}</div>
         </div>
     )
