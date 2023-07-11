@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 
 const Support = () => {
@@ -90,23 +91,23 @@ const Support = () => {
                                       <ul className="list-unstyled">
 
                                           <li>
-                                              <a href="account-setting.html"><img src="images/account-setting-icon.png" alt="Account Setting"/>Account Setting</a>
+                                              <a href="account-setting.html"><Image width={30} height={30} src="/images/account-setting-icon.png" alt="Account Setting"/>Account Setting</a>
                                           </li>
 
                                           <li>
-                                              <a href="donation-plan.html"><img src="images/donation-plan-icon.png" alt="Donation Plan"/>Donation Plan</a>
+                                              <a href="donation-plan.html"><Image width={30} height={30} src="/images/donation-plan-icon.png" alt="Donation Plan"/>Donation Plan</a>
                                           </li>
 
                                           <li>
-                                              <a href="invoice-blank.html"><img src="images/invoice-icon.png" alt="Invoice"/>Invoice</a>
+                                              <a href="invoice-blank.html"><Image width={30} height={30} src="/images/invoice-icon.png" alt="Invoice"/>Invoice</a>
                                           </li>
 
                                           <li>
-                                              <a className="active" href="support.html"><img src="images/customer-support-icon.png" alt="Support"/>Support</a>
+                                              <a className="active" href="support.html"><Image width={30} height={30} src="/images/customer-support-icon.png" alt="Support"/>Support</a>
                                           </li>
 
                                           <li>
-                                              <a href="#"><img src="images/sign-out-icon.png" alt="Sign out"/>Sign out</a>
+                                              <a href="#"><Image width={30} height={30} src="/images/sign-out-icon.png" alt="Sign out"/>Sign out</a>
                                           </li>
 
                                       </ul>

@@ -46,9 +46,9 @@ const Header = (props: any) => {
               <div className="d-flex justify-content-between align-items-center">
 
                 {/* <!-- LOGO --> */}
-                <a href="select-screening.html" className="logo">
-                  <img src="images/logo.png" alt="Mysight logo" />
-                </a>
+                <Link href="select-screening" className="logo">
+                  <Image src="/images/logo.png" width={200} height={68.23} alt="Mysight logo" />
+                </Link>
 
                 <div className="username">
                   Hello, <span>John Doe</span>

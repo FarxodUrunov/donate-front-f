@@ -89,8 +89,8 @@ const Register = () => {
 
                                     {/* <!-- Form Help Text --> */}
                                     <div className="form-help-text">
-                                        You'll receive a confirmation email in your inbox with a link to activate your account.
-                                        If you have any problems, <Link href="support">contact us!</Link>
+                                        {"You'll receive a confirmation email in your inbox with a link to activate your account. If you have any problems,"}
+                                        <Link href="support">contact us!</Link>
                                     </div>
 
                                 </form>

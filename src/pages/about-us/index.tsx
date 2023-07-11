@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import Image from "next/image";
 
 export default function AboutUs() {
   return (
@@ -47,8 +48,10 @@ export default function AboutUs() {
         <section className="video-wrapper">
           <div className="container">
             <div className="video-container">
-              <img
-                src="images/video-banner.jpg"
+              <Image
+                src="/images/video-banner.jpg"
+                width={1296}
+                height={657.81}
                 className="img-fluid"
                 alt="About Us Video"
               />
@@ -122,8 +125,10 @@ export default function AboutUs() {
             <div className="row align-items-center">
               <div className="col-lg-3 col-md-4">
                 <div className="quote-img-wrap pe-md-2">
-                  <img
-                    src="images/quote-bible-img.png"
+                  <Image
+                    width={298}
+                    height={298}
+                    src="/images/quote-bible-img.png"
                     className="img-fluid pb-md-0 pb-4"
                     alt="Quote Bible Image"
                   />
@@ -131,15 +136,15 @@ export default function AboutUs() {
               </div>
               <div className="col-lg-9 col-md-8">
                 <div className="quote-text">
-                  <img
-                    src="images/quote-img.png"
+                  <Image
+                    width={100}
+                    height={114}
+                    src="/images/quote-img.png"
                     className="img-fluid"
                     alt="Quote Image"
                   />
                   <p>
-                    Have faith in the LORD your God and you will be upheld; have
-                    faith in his prophets and you will be successful." 2
-                    Chronicles 20:20
+                    {"Have faith in the LORD your God and you will be upheld; have faith in his prophets and you will be successful. 2 Chronicles 20:20"}
                   </p>
                 </div>
               </div>
@@ -154,8 +159,10 @@ export default function AboutUs() {
             <div className="container">
               <div className="row align-items-center">
                 <div className="col-lg-6 pe-lg-4">
-                  <img
-                    src="images/placeholder-img.png"
+                  <Image
+                    width={624}
+                    height={487.5}
+                    src="/images/placeholder-img.png"
                     className="img-fluid pb-lg-0 pb-3"
                     alt=""
                   />
@@ -181,8 +188,10 @@ export default function AboutUs() {
             <div className="container">
               <div className="row align-items-center">
                 <div className="col-lg-6 ps-lg-4 order-lg-2 order-1">
-                  <img
-                    src="images/placeholder-img.png"
+                  <Image
+                    width={624}
+                    height={487.5}
+                    src="/images/placeholder-img.png"
                     className="img-fluid pb-lg-0 pb-3"
                     alt=""
                   />
@@ -208,8 +217,10 @@ export default function AboutUs() {
             <div className="container">
               <div className="row align-items-center">
                 <div className="col-lg-6 pe-lg-4">
-                  <img
-                    src="images/placeholder-img.png"
+                  <Image
+                    width={624}
+                    height={487.5}
+                    src="/images/placeholder-img.png"
                     className="img-fluid pb-lg-0 pb-3"
                     alt=""
                   />
@@ -235,8 +246,10 @@ export default function AboutUs() {
             <div className="container">
               <div className="row align-items-center">
                 <div className="col-lg-6 ps-lg-4 order-lg-2 order-1">
-                  <img
-                    src="images/placeholder-img.png"
+                  <Image
+                    width={624}
+                    height={487.5}
+                    src="/images/placeholder-img.png"
                     className="img-fluid pb-lg-0 pb-3"
                     alt=""
                   />
@@ -269,8 +282,10 @@ export default function AboutUs() {
                 {/* Donation Section Text */}
                 <div className="donation-section-right ps-lg-5">
                   {/* Disbursement Icon */}
-                  <img
-                    src="images/donation-disburse-icon.png"
+                  <Image
+                    width={80}
+                    height={80}
+                    src="/images/donation-disburse-icon.png"
                     className="img-fluid"
                     alt="Donation Disbursement Icon"
                   />
