@@ -138,7 +138,7 @@ const SeledctScreening = () => {
                                                     {/* <!-- God-Will Screening--> */}
                                                     <div className="screening-box" data-page="godswill-screening.html">
                                                         <Image width={65} height={65} src="/images/god-will-screening.png" className="img-fluid" alt="God's Will" />
-                                                        <h5>God's Will</h5>
+                                                        <h5>{"God's Will"}</h5>
                                                     </div>
                                                 </div>
 
