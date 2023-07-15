@@ -13,7 +13,7 @@ import { useState } from "react";
 
 const Header = (props: any) => {
 
-  const router = useRouter()
+  const {pathname} = useRouter()
 
   const [menuLeft, setMenuLeft] = useState('-350px')
 
@@ -27,14 +27,16 @@ const Header = (props: any) => {
     // document.getElementById("sidebar").style.left = "-350px";
   }
 
+  console.log(pathname)
+
   return (
     <>
       {/* HEADER */}
       {props.main ?
-        ((router.pathname === "/login" || router.pathname === "/register") ? <header className="light-header">
+        ((pathname === "/login" || pathname === "/register") ? <header className="light-header">
           <div className="container-fluid">
             {/* LOGO */}
-            <Link href="select-screening" className="logo">
+            <Link href="/" className="logo">
               <Image src="/images/logo.png" width={200} height={68.23} alt="Mysight logo" />
             </Link>
           </div>
@@ -46,7 +48,7 @@ const Header = (props: any) => {
               <div className="d-flex justify-content-between align-items-center">
 
                 {/* <!-- LOGO --> */}
-                <Link href="select-screening" className="logo">
+                <Link href="/" className="logo">
                   <Image src="/images/logo.png" width={200} height={68.23} alt="Mysight logo" />
                 </Link>
 
@@ -75,7 +77,7 @@ const Header = (props: any) => {
           <Navbar expand="lg" className="">
             <div className="container-fluid">
               {/* LOGO */}
-              <Link href="select-screening" className="navbar-brand">
+              <Link href="/" className="navbar-brand">
                 <Image src="/images/logo.png" width={200} height={68.23} alt="Mysight logo" />
               </Link>
               {/* Navbar Toggler */}
@@ -90,25 +92,25 @@ const Header = (props: any) => {
                 <ul className="navbar-nav pt-lg-0 pt-3 ms-auto">
                   <li className="nav-item">
                     {/* Account Settings */}
-                    <Link className="nav-link" href="account-setting.html">
+                    <Link className={`nav-link ${pathname === "/account-setting" ? "active" : ""}`} href="account-setting">
                       Account Settings
                     </Link>
                   </li>
                   {/* Donation Plan */}
                   <li className="nav-item">
-                    <Link className="nav-link" href="donation-plan.html">
+                    <Link className={`nav-link ${pathname === "/donation-plan" ? "active" : ""}`} href="donation-plan">
                       Donation Plan
                     </Link>
                   </li>
                   {/* Invoice */}
                   <li className="nav-item">
-                    <Link className="nav-link active" href="about-us">
+                    <Link className={`nav-link ${pathname === "/about-us" ? "active" : ""}`} href="about-us">
                       About Us
                     </Link>
                   </li>
                   {/* Support */}
                   <li className="nav-item">
-                    <Link className="nav-link" href="support.html">
+                    <Link className={`nav-link ${pathname === "/support" ? "active" : ""}`} href="support">
                       Support
                     </Link>
                   </li>

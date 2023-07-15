@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -9,6 +10,14 @@ const Login = () => {
 
   return (
     <> 
+      <header className="light-header">
+        <div className="container-fluid">
+          {/* LOGO */}
+          <Link href="select-screening" className="logo">
+            <Image src="/images/logo.png" width={200} height={68.23} alt="Mysight logo" />
+          </Link>
+        </div>
+      </header>
       {/* MAIN */}
       <main>
         {/* Auth Wrapper */}
@@ -84,7 +93,7 @@ const Login = () => {
                       </label>
                     </div>
                     {/* Forget Password */}
-                    <Link href="forget-password.html" className="forgetpass">
+                    <Link href="forget-password" className="forgetpass">
                       Forgot Password
                     </Link>
                   </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -11,10 +12,16 @@ const Register = () => {
 
     return (
         <>
+            <header className="light-header">
+                <div className="container-fluid">
+                    {/* LOGO */}
+                    <Link href="/" className="logo">
+                        <Image src="/images/logo.png" width={200} height={68.23} alt="Mysight logo" />
+                    </Link>
+                </div>
+            </header>
             {/* MAIN */}
             <main>
-
-
                 {/* <!-- Auth Wrapper --> */}
                 <section className="auth-wrapper d-flex align-items-center">
 

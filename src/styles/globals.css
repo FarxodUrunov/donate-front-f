@@ -558,7 +558,7 @@ a {
     border-radius: 10px;
 }
 
-.forgot-password-box .alert-success-container i {
+.forgot-password-box .alert-success-container svg {
     color: #72bd2f;
     font-size: 24px;
 }
@@ -993,7 +993,7 @@ a {
 }
 
 /* Cancel-Form Icon */
-.screening-form-wrap .cancel-form>i {
+.screening-form-wrap .cancel-form>svg {
     color: #111;
     font-size: 24px;
 }
@@ -1914,15 +1914,17 @@ a {
     color: #777;
 }
 
-.select-card-wrap .payment-card .card-details i {
-    font-size: 26px;
+.select-card-wrap .payment-card .card-details button {
+    font-size: 19px;
     cursor: pointer;
     color: #f54136;
-    padding: 1px 6px;
+    padding: 1px 3px;
     transition: .1s;
+    border: none;
+    background-color: transparent;
 }
 
-.select-card-wrap .payment-card .card-details i:hover {
+.select-card-wrap .payment-card .card-details button:hover {
     background-color: #f53f36;
     color: #fff;
     border-radius: 100px;
@@ -2117,13 +2119,14 @@ a {
 .donation-plan-box .plan-feature ul li {
     margin-bottom: 16px;
     display: flex;
-    align-items: baseline;
+    /* align-items: center; */
 }
 
-.donation-plan-box .plan-feature ul li i {
+.donation-plan-box .plan-feature ul li svg {
     color: #72bd2f;
     font-size: 20px;
     margin-right: 10px;
+    margin-top: 2px;
 }
 
 .donation-plan-box .plan-feature ul li span {
@@ -2307,8 +2310,8 @@ a {
     color: #fff;
 }
 
-.invoice-box table>tbody>tr>td .download-btn i {
-    margin-left: 6px;
+.invoice-box table>tbody>tr>td .download-btn svg {
+    margin-left: 8px;
 }
 
 
@@ -2399,16 +2402,16 @@ a {
     margin-left: 20px;
 }
 
-.plan-member-info .status-wrap .status>i {
+.plan-member-info .status-wrap .status>svg {
     font-size: 28px;
     margin-right: 8px;
 }
 
-.plan-member-info .status-wrap .status>i.active {
+.plan-member-info .status-wrap .status>svg.active {
     color: #00ba00;
 }
 
-.plan-member-info .status-wrap .status>i.due {
+.plan-member-info .status-wrap .status>svg.due {
     color: #ffc048;
 }
 
@@ -2799,7 +2802,7 @@ a {
     margin-left: 0;
 }
 
-.feedback-form-box .emoji-rating label i {
+.feedback-form-box .emoji-rating label span {
     font-size: 28px;
     color: gray;
     transition: .2s;
@@ -2812,37 +2815,37 @@ a {
     background-color: transparent;
 }
 
-.feedback-form-box .emoji-rating label i:hover {
+.feedback-form-box .emoji-rating label span:hover {
     color: #fff;
 }
 
-.feedback-form-box .emoji-rating label i.red:hover {
+.feedback-form-box .emoji-rating label span.red:hover {
     color: #fff;
     background-color: #E21818;
 }
 
-.feedback-form-box .emoji-rating label i.yellow:hover {
+.feedback-form-box .emoji-rating label span.yellow:hover {
     color: #fff;
     background-color: #F2BE22;
 }
 
-.feedback-form-box .emoji-rating label i.green:hover {
+.feedback-form-box .emoji-rating label span.green:hover {
     color: #fff;
     background-color: green;
 }
 
 
-.feedback-form-box .emoji-rating .form-check-input:checked~label i.red {
+.feedback-form-box .emoji-rating .form-check-input:checked~label span.red {
     color: #fff;
     background-color: #E21818;
 }
 
-.feedback-form-box .emoji-rating .form-check-input:checked~label i.yellow {
+.feedback-form-box .emoji-rating .form-check-input:checked~label span.yellow {
     color: #fff;
     background-color: #F2BE22;
 }
 
-.feedback-form-box .emoji-rating .form-check-input:checked~label i.green {
+.feedback-form-box .emoji-rating .form-check-input:checked~label span.green {
     color: #fff;
     background-color: green;
 }
@@ -3346,10 +3349,10 @@ a {
 }
 
 /* Icon */
-.disbursement-box ul li>i {
+.disbursement-box ul li>svg {
     font-size: 24px;
-    color: #00ba00;
     margin-right: 10px;
+    color: #00ba00;
 }
 
 .disbursement-box ul li>p {
@@ -3389,7 +3392,7 @@ a {
     border-bottom: 1px solid #ccc;
 }
 
-.faq-section .accordion .accordion-item i{
+.faq-section .accordion .accordion-item svg{
     transition: .3s;
     font-size: 20px;
     margin-right: 10px;
@@ -3400,7 +3403,7 @@ a {
         transform: scale(1.1);
 }
 
-.faq-section .accordion .accordion-item:hover .accordion-button i {
+.faq-section .accordion .accordion-item:hover .accordion-button svg {
     color: #72bd2f;
     transform: scale(1.1);
 }
