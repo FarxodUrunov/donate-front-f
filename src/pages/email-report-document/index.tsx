@@ -17,7 +17,7 @@ const EmailReportDocument = () => {
                                     <td width={24}>&nbsp;</td>
                                     <td align="left" valign="top">
                                         <Link href="#">
-                                            <Image src="/images/logo.png" width={140} height={47.75} style={{ maxWidth: '140px', width: '140px' }} alt="Mysight" border={0} />
+                                            <Image src="/images/logo.png" width={140} height={47.75} alt="Mysight" />
                                         </Link>
                                     </td>
                                     <td width={24}>&nbsp;</td>
@@ -301,7 +301,7 @@ const EmailReportDocument = () => {
                                                     <td>
                                                         <table width="100%" cellSpacing={0} cellPadding={0} border={0}>
                                                             <tbody><tr>
-                                                                <td width={70} valign="center">
+                                                                <td width={70} >
                                                                     <div style={{ padding: 0, margin: 0, fontSize: '12px', fontWeight: 'bold', color: '#333' }}>
                                                                         Directives 1</div>
                                                                 </td>
@@ -374,7 +374,7 @@ const EmailReportDocument = () => {
                                                     <td>
                                                         <table width="100%" cellSpacing={0} cellPadding={0} border={0}>
                                                             <tbody><tr>
-                                                                <td width={120} valign="center">
+                                                                <td width={120}>
                                                                     <div style={{ padding: 0, margin: 0, fontSize: '12px', fontWeight: 'bold', color: '#333' }}>
                                                                         Generaal Screening</div>
                                                                 </td>
