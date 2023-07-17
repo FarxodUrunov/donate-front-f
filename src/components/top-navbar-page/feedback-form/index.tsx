@@ -68,7 +68,7 @@ const FeedbackForm = () => {
                                     </div>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="feedbackTextarea">Do you have any thoughts you'd like to share?</label>
+                                    <label htmlFor="feedbackTextarea">{"Do you have any thoughts you'd like to share?"}</label>
                                     <textarea id="feedbackTextarea" className="form-control" rows={5} defaultValue={""} />
                                 </div>
                                 <div className="follow-permission-wrap form-group mt-lg-5 mt-4">

@@ -50,7 +50,7 @@ const InvoiceActive = () => {
                                     <td>#INV-0019</td>
                                     <td>
                                         <div className="invoice-member-info">
-                                            <img src="images/user-woman.png" className="img-fluid user-pic" alt="Avatar" />
+                                            <Image width={38} height={38} src="/images/user-woman.png" className="img-fluid user-pic" alt="Avatar" />
                                             <div>
                                                 <h5>Lauretta Williams</h5>
                                                 <p>#PT0016</p>
@@ -75,7 +75,7 @@ const InvoiceActive = () => {
                                     <td>#INV-0019</td>
                                     <td>
                                         <div className="invoice-member-info">
-                                            <img src="images/user-man.png" className="img-fluid user-pic" alt="Avatar" />
+                                            <Image width={38} height={38} src="/images/user-man.png" className="img-fluid user-pic" alt="Avatar" />
                                             <div>
                                                 <h5>Lincon Workman</h5>
                                                 <p>#PT0016</p>
@@ -100,7 +100,7 @@ const InvoiceActive = () => {
                                     <td>#INV-0019</td>
                                     <td>
                                         <div className="invoice-member-info">
-                                            <img src="images/user-woman.png" className="img-fluid user-pic" alt="Avatar" />
+                                            <Image width={38} height={38} src="/images/user-woman.png" className="img-fluid user-pic" alt="Avatar" />
                                             <div>
                                                 <h5>Lauretta Williams</h5>
                                                 <p>#PT0016</p>

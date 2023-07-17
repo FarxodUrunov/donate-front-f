@@ -28,9 +28,9 @@ const ResetEmailSent = () => {
                                   </svg>
                               </div>
                               <div className="text">
-                                  If there's a MySight account connected to this email address, we'll email you password reset instructions.
+                                  {"If there's a MySight account connected to this email address, we'll email you password reset instructions."}
                                   <br />
-                                  If you don't receive the email, please try again and make sure you enter the email address associated with your MySight account.
+                                  {"If you don't receive the email, please try again and make sure you enter the email address associated with your MySight account."}
                               </div>
                           </div>
                           {/* Next Button */}

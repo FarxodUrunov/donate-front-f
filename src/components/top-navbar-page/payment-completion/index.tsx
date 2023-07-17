@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 const PaymentCompletion = () => {
   return (
@@ -97,9 +98,9 @@ const PaymentCompletion = () => {
                                                           <input type="text" className="form-control" id="cardNumber" placeholder="0000 0000 0000 0000" required />
                                                           {/* Card Logos */}
                                                           <span className="input-group-text">
-                                                              <img src="images/visa-logo.png" width={32} alt="Visa" />
-                                                              <img src="images/mastercard-logo.png" width={32} alt="Mastercard" />
-                                                              <img src="images/verve-logo.png" width={32} alt="Verve" />
+                                                              <Image height={32} src="/images/visa-logo.png" width={32} alt="Visa" />
+                                                              <Image height={32} src="/images/mastercard-logo.png" width={32} alt="Mastercard" />
+                                                              <Image height={32} src="/images/verve-logo.png" width={32} alt="Verve" />
                                                           </span>
                                                           {/* Secure Lock Icon */}
                                                           <span className="input-group-text" data-toggle="tooltip" data-placement="top" title="Payments are secured using SSL and client-side encryption.">
@@ -159,7 +160,7 @@ const PaymentCompletion = () => {
                                           </div>
                                           {/* Donate Button */}
                                           <button type="submit" className="btn btn-primary w-100">
-                                              <img src="images/paypal-logo.png" width={100} alt="Paypal" /><span className="ms-2">Donate</span>
+                                              <Image src="/images/paypal-logo.png" width={100} height={25.78} alt="Paypal" /><span className="ms-2">Donate</span>
                                           </button>
                                           {/* Paypal Support Text */}
                                           <div className="text-center pt-1"><small>The safer, easier way to pay</small></div>

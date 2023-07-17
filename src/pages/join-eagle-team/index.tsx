@@ -80,7 +80,7 @@ const JoinEagleTeam = () => {
                                                         {/* Radio Check */}
                                                         <div className="form-check me-xl-4 me-3  mb-sm-0 mb-3">
                                                             <input className="form-check-input" type="radio" name="Intercede" id="IntercedeNo" />
-                                                            <label className="form-check-label" htmlFor="IntercedeNo">No, I don't</label>
+                                                            <label className="form-check-label" htmlFor="IntercedeNo">{"No, I don't"}</label>
                                                         </div>
                                                         {/* Radio Check */}
                                                         <div className="form-check">
@@ -93,7 +93,7 @@ const JoinEagleTeam = () => {
                                             {/* Church-Denomination Field */}
                                             <div className="col-lg-12">
                                                 <div className="form-group mb-4">
-                                                    <label className="form-label" htmlFor="ChurchDenominationSelect">What's your church denomination</label>
+                                                    <label className="form-label" htmlFor="ChurchDenominationSelect">{"What's your church denomination"}</label>
                                                     <select id="ChurchDenominationSelect" className="form-select" name="ChurchDenomination">
                                                         <option value="" />
                                                         <option value={1}>Roman Catholic</option>
@@ -106,7 +106,7 @@ const JoinEagleTeam = () => {
                                                         <option value={8}>Methodists</option>
                                                         <option value={9}>Pentecostals</option>
                                                         <option value={10}>Presbyterianism</option>
-                                                        <option value={11}>Jehovah's Witnesses</option>
+                                                        <option value={11}>{"Jehovah's Witnesses"}</option>
                                                         <option value={12}>Mormons/Latter-Day Saints</option>
                                                     </select>
                                                 </div>
@@ -178,7 +178,7 @@ const JoinEagleTeam = () => {
                                             {/* Location Field */}
                                             <div className="col-lg-12">
                                                 <div className="form-group mb-4">
-                                                    <label className="form-label" htmlFor="LocationSelectCountry">What's your location</label>
+                                                    <label className="form-label" htmlFor="LocationSelectCountry">{"What's your location"}</label>
                                                     <select id="LocationSelectCountry" className="form-select">
                                                         <option value="" />
                                                     </select>
@@ -187,7 +187,7 @@ const JoinEagleTeam = () => {
                                             {/* Interest Field */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
-                                                    <label className="form-label">I'm interested in</label>
+                                                    <label className="form-label">{"I'm interested in"}</label>
                                                     <div className="d-xxl-flex align-items-center">
                                                         {/* Radio Check */}
                                                         <div className="form-check me-xl-4 mb-xxl-0 mb-2">
@@ -217,7 +217,9 @@ const JoinEagleTeam = () => {
                                     {/* Image Content */}
                                     <div className="image-content">
                                         <h2>Our Mission is Simple</h2>
-                                        <p className="pe-lg-2">We're a remote team of diverse believers, Holy Spirt Filled, passionate, committed ministers driven to edify the body of Christ, believers, and families through Gifts of the Spirit</p>
+                                        <p className="pe-lg-2">
+                                            {"We're a remote team of diverse believers, Holy Spirt Filled, passionate, committed ministers driven to edify the body of Christ, believers, and families through Gifts of the Spirit"}
+                                        </p>
                                         <div className="row align-items-center">
                                             <div className="col-xxl-9 col-lg-12 col-md-8 d-xl-flex">
                                                 {/* Text Box */}
@@ -226,7 +228,9 @@ const JoinEagleTeam = () => {
                                                         <Image width={30.41} height={34.59} src="/images/eagle-icon.png" className="img-fluid" alt="Eagle Icon" />
                                                     </div>
                                                     <div>
-                                                        <p>We're fully remote and 100% committed to rendering spiritual solutions through the help of the Holy Spirit</p>
+                                                        <p>
+                                                            {"We're fully remote and 100% committed to rendering spiritual solutions through the help of the Holy Spirit"}
+                                                        </p>
                                                     </div>
                                                 </div>
                                                 {/* Text Box */}
@@ -235,7 +239,9 @@ const JoinEagleTeam = () => {
                                                         <Image width={30.48} height={38} src="/images/bible-icon.png" className="img-fluid" alt="Eagle Icon" />
                                                     </div>
                                                     <div>
-                                                        <p>We're not Pschyics, diviners, or sorceries. We believe in God, the Father Almighty, Creator of Heaven and Earth.</p>
+                                                        <p>
+                                                            {"We're not Pschyics, diviners, or sorceries. We believe in God, the Father Almighty, Creator of Heaven and Earth."}
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>

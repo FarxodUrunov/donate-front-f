@@ -12,7 +12,8 @@ const DonationPlan = () => {
                 <h1>Donation Plan</h1>
 
                 <div className="para-group">
-                    <p>We’re a group of Holy Spirt filled, bible-believing, gifted seers. We're here to ensure you get a clear, detailed, and precise spiritual report to help you, your family, and the body of Christ.
+                    <p>
+                        {"We’re a group of Holy Spirt filled, bible-believing, gifted seers. We're here to ensure you get a clear, detailed, and precise spiritual report to help you, your family, and the body of Christ."}
                     </p>
                     <p>We stand on the word in 1 Timothy 5:18 and Ecclesiastes 3:13. Our subscription plans are seeds given to support the ministerial work.</p>
                 </div>

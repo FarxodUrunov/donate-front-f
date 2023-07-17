@@ -53,9 +53,7 @@ const EmailPasswordChanged = () => {
                                             </td>
                                             <td bgcolor="#ffffff">
                                                 <div style={{ fontSize: '16px', fontWeight: 400, lineHeight: '27px', color: '#5a5b5f' }}>
-                                                    This is confirmation that your password for your Mysight account associated
-                                                    with this email address has been changed. If this is a change you made, we're
-                                                    good to go!
+                                                    {"This is confirmation that your password for your Mysight account associated with this email address has been changed. If this is a change you made, we're good to go!"}
                                                 </div>
                                             </td>
                                             <td bgcolor="#ffffff" align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>

@@ -20,7 +20,7 @@ const DeleteAccount = () => {
                             <form>
 
                                 {/* <!-- Title --> */}
-                                <h1>Verify that it's you</h1>
+                                <h1>{"Verify that it's you"}</h1>
 
                                 {/* <!-- Email Input --> */}
                                 <div className="form-floating">
