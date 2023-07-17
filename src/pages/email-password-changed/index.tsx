@@ -43,46 +43,46 @@ const EmailPasswordChanged = () => {
                                             <td align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>&nbsp;</td>
                                         </tr>
                                         <tr>
-                                            <td bgcolor="#ffffff" height={30} colSpan={3} style={{ fontSize: '1px', lineHeight: '1px' }}>
+                                            <td  height={30} colSpan={3} style={{ fontSize: '1px', lineHeight: '1px' }}>
                                                 &nbsp;
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td bgcolor="#ffffff" align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>
+                                            <td  align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>
                                                 &nbsp;
                                             </td>
-                                            <td bgcolor="#ffffff">
+                                            <td >
                                                 <div style={{ fontSize: '16px', fontWeight: 400, lineHeight: '27px', color: '#5a5b5f' }}>
                                                     {"This is confirmation that your password for your Mysight account associated with this email address has been changed. If this is a change you made, we're good to go!"}
                                                 </div>
                                             </td>
-                                            <td bgcolor="#ffffff" align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>
+                                            <td  align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>
                                                 &nbsp;
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td bgcolor="#ffffff" height={30} colSpan={3} style={{ fontSize: '1px', lineHeight: '1px' }}>
+                                            <td  height={30} colSpan={3} style={{ fontSize: '1px', lineHeight: '1px' }}>
                                                 &nbsp;
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td bgcolor="#ffffff" align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>
+                                            <td  align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>
                                                 &nbsp;
                                             </td>
-                                            <td bgcolor="#ffffff">
+                                            <td >
                                                 <div style={{ fontSize: '16px', fontWeight: 400, lineHeight: '27px', color: '#5a5b5f' }}>
                                                     If you did not personally request this change, please securely <a href="#" style={{ textDecoration: 'none', color: '#72bd2f', whiteSpace: 'nowrap' }} target="_blank">reset your password</a> or <a href="#" style={{ textDecoration: 'none', color: '#72bd2f', whiteSpace: 'nowrap' }} target="_blank">contact support.</a> For additional information regarding Mysight password change
                                                     and reset, visit our dedicated
                                                     <a href="#" style={{ textDecoration: 'none', color: '#72bd2f', whiteSpace: 'nowrap' }} target="_blank"> Mysight Support page</a>.
                                                 </div>
                                             </td>
-                                            <td bgcolor="#ffffff" align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>
+                                            <td  align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>
                                                 &nbsp;
                                             </td>
                                         </tr>
                                         <tr>
                                             <td width={40} />
-                                            <td bgcolor="#ffffff" height={60} style={{ borderBottom: '1px solid #ccc', fontSize: '1px', lineHeight: '1px' }}>
+                                            <td  height={60} style={{ borderBottom: '1px solid #ccc', fontSize: '1px', lineHeight: '1px' }}>
                                                 &nbsp;
                                             </td>
                                             <td width={40} />
@@ -92,7 +92,7 @@ const EmailPasswordChanged = () => {
                                 <table bgcolor="#ffffff" cellPadding={0} cellSpacing={0} align="center" border={0} width={500}>
                                     <tbody>
                                         <tr>
-                                            <td bgcolor="#ffffff" height={55} colSpan={3}> &nbsp;</td>
+                                            <td height={55} colSpan={3}> &nbsp;</td>
                                         </tr>
                                         <tr>
                                             <td width={40} />
@@ -100,7 +100,7 @@ const EmailPasswordChanged = () => {
                                             <td width={40} />
                                         </tr>
                                         <tr>
-                                            <td bgcolor="#ffffff" height={40} colSpan={3}> &nbsp;</td>
+                                            <td height={40} colSpan={3}> &nbsp;</td>
                                         </tr>
                                         <tr>
                                             <td align="center" colSpan={3}>
@@ -109,22 +109,22 @@ const EmailPasswordChanged = () => {
                                                         <tr>
                                                             <td align="center" width={80}>
                                                                 <Link href="#">
-                                                                    <Image width={40} height={40} src="/images/fb.png" alt="facebook" border={0} />
+                                                                    <Image width={40} height={40} src="/images/fb.png" alt="facebook"  />
                                                                 </Link>
                                                             </td>
                                                             <td align="center" width={80}>
                                                                 <Link href="#">
-                                                                    <Image width={40} height={40} src="/images/tw.png" alt="Twitter" border={0} />
+                                                                    <Image width={40} height={40} src="/images/tw.png" alt="Twitter"  />
                                                                 </Link>
                                                             </td>
                                                             <td align="center" width={80}>
                                                                 <Link href="#">
-                                                                    <Image width={40} height={40} src="/images/ig.png" alt="Instagram" border={0} />
+                                                                    <Image width={40} height={40} src="/images/ig.png" alt="Instagram"  />
                                                                 </Link>
                                                             </td>
                                                             <td align="center" width={80}>
                                                                 <Link href="#">
-                                                                    <Image width={40} height={40} src="/images/tt.png" alt="TikTok" border={0} />
+                                                                    <Image width={40} height={40} src="/images/tt.png" alt="TikTok"  />
                                                                 </Link>
                                                             </td>
                                                         </tr>
@@ -133,7 +133,7 @@ const EmailPasswordChanged = () => {
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td bgcolor="#ffffff" height={72} colSpan={3} style={{ borderBottom: '7px solid #72bd2f' }}> &nbsp;</td>
+                                            <td height={72} colSpan={3} style={{ borderBottom: '7px solid #72bd2f' }}> &nbsp;</td>
                                         </tr>
                                     </tbody>
                                 </table>
