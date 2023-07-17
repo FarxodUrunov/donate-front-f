@@ -18,7 +18,7 @@ const EmailPasswordChanged = () => {
                                         <tr>
                                             <td align="left" valign="top" style={{ textAlign: 'center' }}>
                                                 <Link href="#">
-                                                    <Image width={185} height={63.11} src="/images/logo.png" style={{ width: '185px', maxWidth: '185px', fontSize: '24px', lineHeight: '42px' }} alt="Mysight" border={0} />
+                                                    <Image width={185} height={63.11} src="/images/logo.png" style={{ fontSize: '24px', lineHeight: '42px' }} alt="Mysight" border={0} />
                                                 </Link>
                                             </td>
                                         </tr>
