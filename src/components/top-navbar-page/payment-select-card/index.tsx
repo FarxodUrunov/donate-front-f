@@ -216,7 +216,7 @@ const PaymentSelectCard = () => {
                                           </div>
                                           {/* Donate Button */}
                                           <button type="submit" className="btn btn-primary w-100">
-                                              <img src="images/paypal-logo.png" width={100} alt="Paypal" /><span className="ms-2">Donate</span>
+                                              <Image src="/images/paypal-logo.png" width={100} height={25.78} alt="Paypal" /><span className="ms-2">Donate</span>
                                           </button>
                                           {/* Paypal Support Text */}
                                           <div className="text-center pt-1"><small>The safer, easier way to pay</small></div>

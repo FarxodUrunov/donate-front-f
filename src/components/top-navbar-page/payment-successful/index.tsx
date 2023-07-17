@@ -16,11 +16,13 @@ const PaymentSuccessful = () => {
                               </svg>
                           </a>
                           <div className="success-icon text-center">
-                              <img src="images/payment-success-icon.jpg" className="img-fluid" alt="Payment Successful Icon" />
+                              <Image width={120} height={116} src="/images/payment-success-icon.jpg" className="img-fluid" alt="Payment Successful Icon" />
                           </div>
                           <h1>Payment Successful</h1>
                           <h3>Spread the World</h3>
-                          <p>Love the service. Go ahead, and share the link with friends--they'll thank you for it.</p>
+                          <p>
+                              {"Love the service. Go ahead, and share the link with friends--they'll thank you for it."}
+                          </p>
                           <div className="social-icon-row row">
                               <div className="col-8 mx-auto">
                                   <div className="d-flex">

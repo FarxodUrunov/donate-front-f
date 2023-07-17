@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 
 const PaymentDecline = () => {
@@ -94,7 +95,7 @@ const PaymentDecline = () => {
                                                   <div className="form-group transaction-declined-alert mb-4">
                                                       {/* Declined Alert */}
                                                       <div className="d-flex align-items-center mb-3">
-                                                          <img src="images/transaction-declined-icon.png" width={34} alt="Transaction Declined" />
+                                                          <Image src="/images/transaction-declined-icon.png" width={34} height={34} alt="Transaction Declined" />
                                                           <span className="ms-2">Transaction Declined</span>
                                                       </div>
                                                       <label htmlFor="OtpVerifiation">OTP Verification</label>
@@ -129,7 +130,7 @@ const PaymentDecline = () => {
                                           </div>
                                           {/* Donate Button */}
                                           <button type="submit" className="btn btn-primary w-100">
-                                              <img src="images/paypal-logo.png" width={100} alt="Paypal" /><span className="ms-2">Donate</span>
+                                              <Image src="/images/paypal-logo.png" width={100} height={25.78} alt="Paypal" /><span className="ms-2">Donate</span>
                                           </button>
                                           {/* Paypal Support Text */}
                                           <div className="text-center pt-1"><small>The safer, easier way to pay</small></div>
