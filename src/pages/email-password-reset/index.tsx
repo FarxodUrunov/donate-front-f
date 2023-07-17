@@ -17,7 +17,7 @@ const EmailPasswordReset = () => {
                                     <tr>
                                         <td align="left" valign="top" style={{ textAlign: 'center' }}>
                                             <a href="#">
-                                                <Image src="/images/logo.png" width={185} height={63.11} style={{ width: '185px', maxWidth: '185px', fontSize: '24px', lineHeight: '42px' }} alt="Mysight" border={0} />
+                                                <Image src="/images/logo.png" width={185} height={63.11} alt="Mysight" />
                                             </a>
                                         </td>
                                     </tr>
@@ -42,27 +42,27 @@ const EmailPasswordReset = () => {
                                         <td align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>&nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td bgcolor="#ffffff" height={30} colSpan={3} style={{ fontSize: '1px', lineHeight: '1px' }}>
+                                        <td height={30} colSpan={3} style={{ fontSize: '1px', lineHeight: '1px' }}>
                                             &nbsp;
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td bgcolor="#ffffff" align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>
+                                        <td align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>
                                             &nbsp;
                                         </td>
-                                        <td bgcolor="#ffffff">
+                                        <td>
                                             <div style={{ fontSize: '16px', fontWeight: 400, lineHeight: '27px', color: '#5a5b5f' }}>
                                                 You have just requested a password reset for the
                                                 MySight account associated with this email
                                                 address.
                                             </div>
                                         </td>
-                                        <td bgcolor="#ffffff" align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>
+                                        <td align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>
                                             &nbsp;
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td bgcolor="#ffffff" height={30} colSpan={3} style={{ fontSize: '1px', lineHeight: '1px' }}>
+                                        <td height={30} colSpan={3} style={{ fontSize: '1px', lineHeight: '1px' }}>
                                             &nbsp;
                                         </td>
                                     </tr>
@@ -71,7 +71,7 @@ const EmailPasswordReset = () => {
                                             <table cellSpacing={0} cellPadding={0}>
                                                 <tbody>
                                                     <tr>
-                                                        <td bgcolor="#72bd2f" style={{ borderRadius: '50px' }}>
+                                                        <td style={{ borderRadius: '50px' }}>
                                                             <a href="#" style={{ textDecoration: 'none', fontSize: '17px', color: '#ffffff', display: 'inline-block', padding: '14px 36px', borderStyle: 'solid', borderWidth: '1px', borderColor: '#72bd2f', borderRadius: '45px', backgroundColor: '#72bd2f', fontWeight: 'bold' }} target="_blank">Reset Password</a>
                                                         </td>
                                                     </tr>
@@ -80,27 +80,27 @@ const EmailPasswordReset = () => {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td bgcolor="#ffffff" height={30}>
+                                        <td height={30}>
                                             &nbsp;
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td bgcolor="#ffffff" align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>
+                                        <td align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>
                                             &nbsp;
                                         </td>
-                                        <td bgcolor="#ffffff">
+                                        <td>
                                             <div style={{ fontSize: '16px', fontWeight: 400, lineHeight: '27px', color: '#5a5b5f' }}>
                                                 If you continue to have issues signing in, please
                                                 <Link href="#" style={{ color: '#72bd2f', textDecoration: 'none' }}> contact support</Link>. Thank you for using Mysight!
                                             </div>
                                         </td>
-                                        <td bgcolor="#ffffff" align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>
+                                        <td align="center" width={40} style={{ fontSize: '1px', lineHeight: '1px' }}>
                                             &nbsp;
                                         </td>
                                     </tr>
                                     <tr>
                                         <td width={40} />
-                                        <td bgcolor="#ffffff" height={60} style={{ borderBottom: '1px solid #ccc', fontSize: '1px', lineHeight: '1px' }}>
+                                        <td height={60} style={{ borderBottom: '1px solid #ccc', fontSize: '1px', lineHeight: '1px' }}>
                                             &nbsp;
                                         </td>
                                         <td width={40} />
@@ -110,7 +110,7 @@ const EmailPasswordReset = () => {
                             <table bgcolor="#ffffff" cellPadding={0} cellSpacing={0} align="center" border={0} width={500}>
                                 <tbody>
                                     <tr>
-                                        <td bgcolor="#ffffff" height={55} colSpan={3}> &nbsp;</td>
+                                        <td height={55} colSpan={3}> &nbsp;</td>
                                     </tr>
                                     <tr>
                                         <td width={40} />
@@ -120,7 +120,7 @@ const EmailPasswordReset = () => {
                                         <td width={40} />
                                     </tr>
                                     <tr>
-                                        <td bgcolor="#ffffff" height={40} colSpan={3}> &nbsp;</td>
+                                        <td height={40} colSpan={3}> &nbsp;</td>
                                     </tr>
                                     <tr>
                                         <td align="center" colSpan={3}>
@@ -129,22 +129,22 @@ const EmailPasswordReset = () => {
                                                     <tr>
                                                         <td align="center" width={80}>
                                                             <Link href="#">
-                                                                <Image width={40} height={40} src="/images/fb.png" alt="facebook" border={0} />
+                                                                <Image width={40} height={40} src="/images/fb.png" alt="facebook" />
                                                             </Link>
                                                         </td>
                                                         <td align="center" width={80}>
                                                             <Link href="#">
-                                                                <Image width={40} height={40} src="/images/tw.png" alt="Twitter" border={0} />
+                                                                <Image width={40} height={40} src="/images/tw.png" alt="Twitter" />
                                                             </Link>
                                                         </td>
                                                         <td align="center" width={80}>
                                                             <Link href="#">
-                                                                <Image width={40} height={40} src="/images/ig.png" alt="Instagram" border={0} />
+                                                                <Image width={40} height={40} src="/images/ig.png" alt="Instagram" />
                                                             </Link>
                                                         </td>
                                                         <td align="center" width={80}>
                                                             <Link href="#">
-                                                                <Image width={40} height={40} src="/images/tt.png" alt="TikTok" border={0} />
+                                                                <Image width={40} height={40} src="/images/tt.png" alt="TikTok" />
                                                             </Link>
                                                         </td>
                                                     </tr>
@@ -153,7 +153,7 @@ const EmailPasswordReset = () => {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td bgcolor="#ffffff" height={72} colSpan={3} style={{ borderBottom: '7px solid #72bd2f' }}> &nbsp;</td>
+                                        <td height={72} colSpan={3} style={{ borderBottom: '7px solid #72bd2f' }}> &nbsp;</td>
                                     </tr>
                                 </tbody>
                             </table>
