@@ -1,7 +1,18 @@
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect, useState } from "react";
 
 const JoinEagleTeam = () => {
+    const [counters,setCounters] = useState<any[]>([])
+    async function fetchCountries() {
+        const response = await fetch("https://restcountries.com/v2/all");
+        const countries = await response.json();
+        setCounters(countries)
+    }
+    useEffect(() => {
+        fetchCountries()
+    },[])
+
     return (
         <>
             {/* MAIN */}
@@ -181,6 +192,11 @@ const JoinEagleTeam = () => {
                                                     <label className="form-label" htmlFor="LocationSelectCountry">{"What's your location"}</label>
                                                     <select id="LocationSelectCountry" className="form-select">
                                                         <option value="" />
+                                                        {
+                                                            counters?.map((item, i) => (
+                                                                <option value={i+1} >{item.name}</option>
+                                                            ))
+                                                        }
                                                     </select>
                                                 </div>
                                             </div>

@@ -1,7 +1,14 @@
-import Header from "@/components/header";
 import Image from "next/image";
+import { useState } from "react";
+import { Modal } from "react-bootstrap";
 
 export default function AboutUs() {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       {/* MAIN */}
@@ -61,6 +68,7 @@ export default function AboutUs() {
                   className="video_lightbox-link"
                   data-bs-toggle="modal"
                   data-bs-target="#video-popup"
+                  onClick={handleShow}
                 >
                   <svg
                     className="play-icon"
@@ -327,7 +335,7 @@ export default function AboutUs() {
                     provide resources, guidance, and assistance to those seeking
                     spiritual growth and transformation.
                   </p>
-                  <a href="join-eagle-team.html" className="btn btn-primary">
+                  <a href="join-eagle-team" className="btn btn-primary">
                     Join Now
                   </a>
                 </div>
@@ -340,41 +348,25 @@ export default function AboutUs() {
       # MODAL 
   ==============*/}
         {/* Video Popup Modal */}
-        <div
-          className="modal fade"
-          id="video-popup"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabIndex={-1}
-          aria-labelledby="staticBackdropLabel"
-          aria-hidden="true"
+        <Modal
+          show={show}
+          onHide={handleClose}
+          size="lg"
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
         >
-          <div className="modal-dialog modal-dialog-centered modal-lg">
-            <div className="modal-content">
-              <div className="modal-header">
-                <button
-                  type="button"
-                  className="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
+          <Modal.Header closeButton></Modal.Header>
+          <Modal.Body>
+              <div className="embed-responsive">
+                <iframe
+                  src="https://www.youtube.com/embed/mLwlGsRhNIU"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
                 />
               </div>
-              <div className="modal-content rounded-0">
-                <div className="modal-body">
-                  <div className="embed-responsive">
-                    <iframe
-                      src="https://www.youtube.com/embed/mLwlGsRhNIU"
-                      title="YouTube video player"
-                      frameBorder={0}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+            </Modal.Body>
+        </Modal>
       </main>
     </>
   );

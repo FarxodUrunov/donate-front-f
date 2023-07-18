@@ -878,9 +878,10 @@ a {
 
 /* Carosuel Indicator */
 .carousel-indicators {
-    position: relative;
+    /* position: relative; */
+    /* bottom: -40px; */
     margin-top: 40px;
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 
 /* Carousel Dots */
@@ -3301,6 +3302,9 @@ a {
     height: 6px;
     background-color: #72bd2f;
     border-radius: 20px;
+}
+.accordion-header::before{
+    display: none;
 }
 
 /* Common Wrapper Styling */

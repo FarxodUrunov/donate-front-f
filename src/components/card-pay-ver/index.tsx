@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import TabsDebitPaypal from '../tobs-debit-paypal';
 
 interface CardPayVerProps {
     title: string;
@@ -9,7 +9,7 @@ interface CardPayVerProps {
 
 }
 
-const CardPayVer = (props:CardPayVerProps) => {
+const CardPayVer = (props: CardPayVerProps) => {
 
     const {
         title,
@@ -125,146 +125,56 @@ const CardPayVer = (props:CardPayVerProps) => {
                             {/* <!-- Payment Form Wrapper --> */}
                             <div className="basic-container payment-form-wrap">
 
+                                <TabsDebitPaypal >
+                                    {
+                                        cardVariant === "vert" ?
+                                            <form id="DebitPaymentForm" className="payment-form">
 
-                                {/* <!-- Payment Tabs --> */}
-                                <ul className="nav nav-tabs" id="myTab" role="tablist">
-
-                                    {/* <!-- Debit-Payment Tab Button --> */}
-                                    <li className="nav-item" role="presentation">
-                                        <button className="nav-link active" id="debit-tab" data-bs-toggle="tab" data-bs-target="#Debit-Payment" type="button" role="tab" aria-controls="Debit-Payment" aria-selected="true">Debit Card</button>
-                                    </li>
-
-                                    {/* <!-- Payal-Payment Tab Button --> */}
-                                    <li className="nav-item" role="presentation">
-                                        <button className="nav-link" id="paypal-tab" data-bs-toggle="tab" data-bs-target="#Paypal-Payment" type="button" role="tab" aria-controls="Paypal-Payment" aria-selected="false">Paypal</button>
-                                    </li>
-
-                                </ul>
+                                                <div className="row">
 
 
+                                                    {/* <!-- OTP Verification Field --> */}
+                                                    <div className="col-12">
 
-                                {/* <!-- Tab Content --> */}
-                                <div className="tab-content" id="PaymentTabContent">
+                                                        <div className="form-group mb-4">
 
+                                                            <label htmlFor="OtpVerifiation">OTP Verification</label>
 
-                                    {/* <!-- Debit-Payment Tab -->  */}
-                                    <div className="tab-pane show active" id="Debit-Payment" role="tabpanel" aria-labelledby="home-tab" tabIndex={0}>
+                                                            <input type="text" className="form-control" id="OtpVerifiation" placeholder="Enter OTP" required />
 
-                                        {/* <!-- Payment Form --> */}
-                                        <form id="DebitPaymentForm" className="payment-form">
+                                                            <div className="mt-2"><small>Enter the OTP code sent to your phone and complete the transaction.</small></div>
 
-                                            <div className="row">
-
-                                                {
-                                                    cardVariant !== "vert" ? 
-                                                        <>
-                                                            {/* <!-- Card Pin Field --> */ }
-                                                        <div className="col-12">
-                                                            <div className="form-group mb-4">
-                                                                <label htmlFor="cardpin">Enter Pin</label>
-
-                                                                <input type="text" className="form-control" id="cardpin" placeholder="● ● ● ●" required />
-                                                            </div>
                                                         </div>
-                                                        </>
-                                                        :
-                                                        <>
-                                                            {/* OTP Verification Field */}
-                                                            <div className="col-12">
-                                                                <div className="form-group mb-4">
-                                                                    <label htmlFor="OtpVerifiation">OTP Verification</label>
-                                                                    <input type="text" className="form-control" id="OtpVerifiation" placeholder="Enter OTP" required />
-                                                                    <div className="mt-2"><small>Enter the OTP code sent to your phone and complete the transaction.</small></div>
-                                                                </div>
-                                                            </div>
-                                                        </>
-                                                }
-                                                
-                                            </div>
 
-                                            {/* <!-- Submit Button --> */}
-                                            <button type="submit" className="btn btn-primary w-100">Submit</button>
-
-                                        </form>
-
-                                    </div>
+                                                    </div>
 
 
+                                                </div>
 
-                                    {/* <!-- Paypal Payment tab  --> */}
-                                    <div className="tab-pane" id="Paypal-Payment" role="tabpanel" aria-labelledby="Paypal-tab" tabIndex={0}>
+                                                {/* <!-- Submit Button --> */}
+                                                <button type="submit" className="btn btn-primary w-100">Submit</button>
 
-                                        <form id="PaypalPaymentForm" className="payment-form">
+                                            </form>
+                                            :
+                                            <form className="payment-form">
 
-                                            <div className="row">
+                                                <div className="row">
+                                                    <div className="col-12">
+                                                        <div className="form-group mb-4">
+                                                            <label htmlFor="cardpin">Enter Pin</label>
 
-
-                                                {/* <!-- Country Select Field --> */}
-                                                <div className="col-md-8">
-
-                                                    <div className="form-group mb-4">
-
-                                                        <label htmlFor="PayPalSelectCountry">Country/Region</label>
-
-                                                        <select id="PayPalSelectCountry" required className="form-select"
-                                                            name="country">
-                                                            <option value="" disabled>----------</option>
-                                                            <option label="Select Country" disabled></option>
-                                                            <option value="AU">Australia</option>
-                                                            <option value="BR">Brazil</option>
-                                                            <option value="CA">Canada</option>
-                                                            <option value="CN">China</option>
-                                                            <option value="DE">Germany</option>
-                                                            <option value="HK">Hong Kong</option>
-                                                            <option value="IN">India</option>
-                                                            <option value="JP">Japan</option>
-                                                            <option value="NZ">New Zealand</option>
-                                                            <option value="SA">Saudi Arabia</option>
-                                                            <option value="SG">Singapore</option>
-                                                            <option value="ZA">South Africa</option>
-                                                            <option value="KR">South Korea</option>
-                                                            <option value="AE">United Arab Emirates</option>
-                                                            <option value="GB">United Kingdom</option>
-                                                            <option value="US">United States</option>
-                                                        </select>
-
+                                                            <input type="text" className="form-control" id="cardpin" placeholder="● ● ● ●" required />
+                                                        </div>
                                                     </div>
 
                                                 </div>
 
+                                                {/* <!-- Submit Button --> */}
+                                                <button type="submit" className="btn btn-primary w-100">Submit</button>
 
-                                                {/* <!-- Zip Code Field --> */}
-                                                <div className="col-md-4">
-
-                                                    <div className="form-group mb-4">
-
-                                                        <label htmlFor="zipcode">ZIP Code</label>
-
-                                                        <input type="text" className="form-control" id="zipcode" required />
-
-                                                    </div>
-
-                                                </div>
-
-
-                                            </div>
-
-                                            {/* <!-- Donate Button --> */}
-                                            <button type="submit" className="btn btn-primary w-100">
-                                                <Image width={100} height={25.78} src="/images/paypal-logo.png" alt="Paypal" /><span className="ms-2">Donate</span>
-                                            </button>
-
-                                            {/* <!-- Paypal Support Text --> */}
-                                            <div className="text-center pt-1"><small>The safer, easier way to pay</small></div>
-
-                                        </form>
-
-                                    </div>
-
-
-                                </div>
-
-
+                                            </form>
+                                    }
+                                </TabsDebitPaypal>
 
                             </div>
 
@@ -276,16 +186,6 @@ const CardPayVer = (props:CardPayVerProps) => {
 
 
                 </section>
-
-
-
-
-
-
-
-
-
-
             </main>
         </>
     )

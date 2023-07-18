@@ -1,5 +1,35 @@
+import { useEffect, useState } from "react"
 
 const ResetPassword = () => {
+    const [notification, setNotification] = useState(false)
+    const [styleError, setStyleError] = useState(false)
+    const [passwordText,setPasswordText] = useState(false)
+    const [passwordTextTwo,setPasswordTextTwo] = useState(false)
+    const [valueOne, setValueOne] = useState('')
+    const [valueTwo, setValueTwo] = useState('')
+
+    const togglePassword = () => {
+       passwordText ? setPasswordText(false) : setPasswordText(true)
+    }
+    const togglePasswordTwo = () => {
+        passwordTextTwo ? setPasswordTextTwo(false) : setPasswordTextTwo(true)
+    }
+    const handleChangeOne = (e:any) => {
+        setValueOne(e.target.value)
+    }
+    const handleChangeTwo = (e: any) => {
+        setValueTwo(e.target.value)
+    }
+
+    const onResetPassword = (event:any) => {
+        event.preventDefault();
+        if (valueOne === valueTwo) {
+            setStyleError(false)
+        } else {
+            setStyleError(true)
+        }
+    }
+
   return (
     <>
           {/* MAIN */}
@@ -17,17 +47,15 @@ const ResetPassword = () => {
                               </div>
                           </div>
                           {/* Form */}
-                          <form>
+                          <form onSubmit={onResetPassword} >
                               {/* New Password Field */}
                               <div className="form-group mb-3">
                                   <label htmlFor="ResetNewPassword">New Password</label>
                                   <div className="input-group">
-                                      <input className="form-control" id="ResetNewPassword" type="password" placeholder="Enter a new password" required />
-                                      <span className="input-group-text new-password-toggle" 
-                                        //   onClick={togglePassword('ResetNewPassword')}
-                                      >
+                                      <input onChange={(e)=>handleChangeOne(e)} className="form-control" id="ResetNewPassword" type={passwordText ? "text" : "password"} placeholder="Enter a new password" required />
+                                      <span className="input-group-text new-password-toggle" onClick={togglePassword}>
                                           {
-                                              true ?
+                                              !passwordText ?
                                                   <svg xmlns="http://www.w3.org/2000/svg" height={16} width={18} viewBox="0 0 576 512">
                                                       <path fill="currentColor" d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z" />
                                                   </svg>
@@ -43,12 +71,10 @@ const ResetPassword = () => {
                               <div className="form-group mb-4">
                                   <label htmlFor="confirmNewPassword">Confirm Password</label>
                                   <div className="input-group">
-                                      <input className="form-control" id="confirmNewPassword" type="password" placeholder="Confirm you new password" required />
-                                      <span className="input-group-text confirm-password-toggle"
-                                        //   onClick={togglePasswordTwo('confirmNewPassword')}
-                                      >
+                                      <input onChange={(e)=>handleChangeTwo(e)} className="form-control" id="confirmNewPassword" type={passwordTextTwo ? "text" : "password"} placeholder="Confirm you new password" required />
+                                      <span className="input-group-text confirm-password-toggle" onClick={togglePasswordTwo}>
                                           {
-                                              true ? 
+                                              !passwordTextTwo ? 
                                                 <svg xmlns="http://www.w3.org/2000/svg" height={16} width={18} viewBox="0 0 576 512">
                                                     <path fill="currentColor" d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z" />
                                                 </svg>
@@ -60,12 +86,16 @@ const ResetPassword = () => {
                                       </span>
                                   </div>
                                   {/* MisMatch Error */}
-                                  <div id="passwordMismatchError" className="text-danger pt-2" style={{ display: 'none' }}>
-                                      <svg xmlns="http://www.w3.org/2000/svg" height={16} width={16} viewBox="0 0 512 512">
-                                          <path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
-                                      </svg>
-                                      Password did not match
-                                  </div>
+                                  {
+                                      styleError &&
+                                        <div id="passwordMismatchError" className="text-danger pt-2" >
+                                            <svg className="me-1" xmlns="http://www.w3.org/2000/svg" height={16} width={16} viewBox="0 0 512 512">
+                                                <path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                                            </svg>
+                                            Password did not match
+                                        </div>
+                                      
+                                  }
                               </div>
                               {/* Reset Submit Button */}
                               <button type="submit" className="btn btn-primary w-100">Reset my password</button>

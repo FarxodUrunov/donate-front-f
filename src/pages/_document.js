@@ -8,9 +8,9 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <script src="/public/js/jquery.min.js" />
+        {/* <script src="/public/js/jquery.min.js" />
         <script src="/public/js/bootstrap.bundle.min.js" />
-        <script src="/public/js/custom.js" />
+        <script src="/public/js/custom.js" /> */}
       </body>
     </Html>
   );

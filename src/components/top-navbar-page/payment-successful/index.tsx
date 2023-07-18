@@ -1,6 +1,13 @@
 import Image from "next/image"
+import { useState } from "react"
 
 const PaymentSuccessful = () => {
+
+    const [value] = useState("http://mysight.ng.com/")
+    const copyLink = () => {
+        navigator.clipboard.writeText(value)
+    }
+
   return (
     <>
           {/* MAIN */}
@@ -26,15 +33,25 @@ const PaymentSuccessful = () => {
                           <div className="social-icon-row row">
                               <div className="col-8 mx-auto">
                                   <div className="d-flex">
-                                      <a href="#" 
+                                      <a href="https://api.whatsapp.com/send?text=http%3A%2F%2Fmysight.ng.com%2F" target="_blank"
                                     //   onClick="shareOnWhatsapp()" 
                                       className="social-icon"><Image width={56.44} height={56.44} src="/images/whatsapp-icon.jpg" className="img-fluid" alt="Whatsapp" /></a>
-                                      <a href="#" 
+                                      <a
+                                        target="_blank"
+                                        href="https://www.facebook.com/login.php?skip_api_login=1&api_key=966242223397117&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fmysight.ng.com" 
                                     //   onClick="shareOnFacebook()" 
-                                      className="social-icon"><Image width={56.44} height={56.44} src="/images/facebook-icon.jpg" className="img-fluid" alt="Facebook" /></a>
-                                      <a href="#" 
+                                        className="social-icon"
+                                      >
+                                        <Image width={56.44} height={56.44} src="/images/facebook-icon.jpg" className="img-fluid" alt="Facebook" />
+                                        </a>
+                                      <a
+                                        target="_blank" 
+                                        href="https://twitter.com/i/flow/login?redirect_after_login=%2Fintent%2Ftweet%3Furl%3Dhttp%253A%252F%252Fmysight.ng.com" 
                                     //   onClick="shareOnTwitter()"
-                                      className="social-icon"><Image width={56.44} height={56.44} src="/images/twitter-icon.jpg" className="img-fluid" alt="Twitter" /></a>
+                                        className="social-icon"
+                                      >
+                                          <Image width={56.44} height={56.44} src="/images/twitter-icon.jpg" className="img-fluid" alt="Twitter" />
+                                      </a>
                                   </div>
                               </div>
                           </div>
@@ -42,11 +59,9 @@ const PaymentSuccessful = () => {
                               <p>Or Copy Link</p>
                           </div>
                           <div className="link-box input-group">
-                              <input type="text" id="linkInput" className="form-control" placeholder="Username" defaultValue="http://mysight.ng.com/" aria-describedby="copyLink" readOnly />
+                              <input type="text" id="linkInput" className="form-control" placeholder="Username" defaultValue={value} aria-describedby="copyLink" readOnly />
                               <span className="input-group-text p-0" id="copyLink">
-                                  <button
-                                    //   onClick={copyLink}
-                                  >
+                                  <button onClick={copyLink}>
                                       <svg className="mb-1" xmlns="http://www.w3.org/2000/svg" height={16} width={16} viewBox="0 0 512 512">
                                           <path fill="currentColor" d="M288 448H64V224h64V160H64c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64zm-64-96H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64z" />
                                       </svg>

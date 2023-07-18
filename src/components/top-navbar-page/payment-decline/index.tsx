@@ -1,3 +1,4 @@
+import TabsDebitPaypal from "@/components/tobs-debit-paypal"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -72,71 +73,26 @@ const PaymentDecline = () => {
                           </div>
                           {/* Payment Form Wrapper */}
                           <div className="basic-container payment-form-wrap">
-                              {/* Payment Tabs */}
-                              <ul className="nav nav-tabs" id="myTab" role="tablist">
-                                  {/* Debit-Payment Tab Button */}
-                                  <li className="nav-item" role="presentation">
-                                      <button className="nav-link active" id="debit-tab" data-bs-toggle="tab" data-bs-target="#Debit-Payment" type="button" role="tab" aria-controls="Debit-Payment" aria-selected="true">Debit Card</button>
-                                  </li>
-                                  {/* Payal-Payment Tab Button */}
-                                  <li className="nav-item" role="presentation">
-                                      <button className="nav-link" id="paypal-tab" data-bs-toggle="tab" data-bs-target="#Paypal-Payment" type="button" role="tab" aria-controls="Paypal-Payment" aria-selected="false">Paypal</button>
-                                  </li>
-                              </ul>
-
-                              {/* Tab Content */}
-                              <div className="tab-content" id="PaymentTabContent">
-                                  {/* Debit-Payment Tab */}
-                                  <div className="tab-pane show active" id="Debit-Payment" role="tabpanel" aria-labelledby="home-tab" tabIndex={0}>
-                                      <form id="DebitPaymentForm" className="payment-form">
-                                          <div className="row">
-                                              {/* OTP Declined Field */}
-                                              <div className="col-12">
-                                                  <div className="form-group transaction-declined-alert mb-4">
-                                                      {/* Declined Alert */}
-                                                      <div className="d-flex align-items-center mb-3">
-                                                          <Image src="/images/transaction-declined-icon.png" width={34} height={34} alt="Transaction Declined" />
-                                                          <span className="ms-2">Transaction Declined</span>
-                                                      </div>
-                                                      <label htmlFor="OtpVerifiation">OTP Verification</label>
-                                                      <input type="text" className="form-control" id="OtpVerifiation" placeholder="Enter OTP" defaultValue={12312} required />
+                              <TabsDebitPaypal >
+                                  <form id="DebitPaymentForm" className="payment-form">
+                                      <div className="row">
+                                          {/* OTP Declined Field */}
+                                          <div className="col-12">
+                                              <div className="form-group transaction-declined-alert mb-4">
+                                                  {/* Declined Alert */}
+                                                  <div className="d-flex align-items-center mb-3">
+                                                      <Image src="/images/transaction-declined-icon.png" width={34} height={34} alt="Transaction Declined" />
+                                                      <span className="ms-2">Transaction Declined</span>
                                                   </div>
+                                                  <label htmlFor="OtpVerifiation">OTP Verification</label>
+                                                  <input type="text" className="form-control" id="OtpVerifiation" placeholder="Enter OTP" defaultValue={12312} required />
                                               </div>
                                           </div>
-                                          {/* Submit Button */}
-                                          <button type="submit" className="btn btn-primary w-100">Submit</button>
-                                      </form>
-                                  </div>
-                                  {/* Paypal Payment tab  */}
-                                  <div className="tab-pane" id="Paypal-Payment" role="tabpanel" aria-labelledby="Paypal-tab" tabIndex={0}>
-                                      <form id="PaypalPaymentForm" className="payment-form">
-                                          <div className="row">
-                                              {/* Country Select Field */}
-                                              <div className="col-md-8">
-                                                  <div className="form-group mb-4">
-                                                      <label htmlFor="PayPalSelectCountry">Country/Region</label>
-                                                      <select id="PayPalSelectCountry" className="form-select" name="country" required>
-                                                          <option value="">Select a country</option>
-                                                      </select>
-                                                  </div>
-                                              </div>
-                                              {/* Zip Code Field */}
-                                              <div className="col-md-4">
-                                                  <div className="form-group mb-4">
-                                                      <label htmlFor="zipcode">ZIP Code</label>
-                                                      <input type="text" className="form-control" id="zipcode" required />
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          {/* Donate Button */}
-                                          <button type="submit" className="btn btn-primary w-100">
-                                              <Image src="/images/paypal-logo.png" width={100} height={25.78} alt="Paypal" /><span className="ms-2">Donate</span>
-                                          </button>
-                                          {/* Paypal Support Text */}
-                                          <div className="text-center pt-1"><small>The safer, easier way to pay</small></div>
-                                      </form>
-                                  </div>
-                              </div>
+                                      </div>
+                                      {/* Submit Button */}
+                                      <button type="submit" className="btn btn-primary w-100">Submit</button>
+                                  </form>
+                              </TabsDebitPaypal>
                           </div>
                       </div>
                   </div>
