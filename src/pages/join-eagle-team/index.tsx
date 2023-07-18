@@ -194,7 +194,7 @@ const JoinEagleTeam = () => {
                                                         <option value="" />
                                                         {
                                                             counters?.map((item, i) => (
-                                                                <option value={i+1} >{item.name}</option>
+                                                                <option key={item.name+i} value={i+1} >{item.name}</option>
                                                             ))
                                                         }
                                                     </select>
