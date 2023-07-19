@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react"
+import Link from "next/link"
+import { useState } from "react"
 
 const ResetPassword = () => {
     const [notification, setNotification] = useState(false)
@@ -43,7 +44,7 @@ const ResetPassword = () => {
                           <div className="d-flex justify-content-between align-items-center mb-4">
                               <h1>Reset password</h1>
                               <div>
-                                  <a href="/">Back to Log-in</a>
+                                  <Link href="/">Back to Log-in</Link>
                               </div>
                           </div>
                           {/* Form */}
