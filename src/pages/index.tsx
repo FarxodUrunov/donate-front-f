@@ -4,12 +4,12 @@ import { useState } from "react";
 
 
 const Login = () => {
-
+  
   const [userName, setUserName] = useState('')
   const [userPassword, setUserPassword] = useState('')
 
   return (
-    <>
+    <> 
       <header className="light-header">
         <div className="container-fluid">
           {/* LOGO */}
@@ -37,7 +37,7 @@ const Login = () => {
                   </p>
                   {/* Buttons */}
                   <div className="form-switch-btns">
-                    <Link href="login" className="btn btn-primary active">
+                    <Link href="/" className="btn btn-primary active">
                       Login
                     </Link>
                     <Link href="register" className="btn btn-primary ms-2">
@@ -55,7 +55,7 @@ const Login = () => {
                   <div className="form-floating mb-4">
                     <input
                       value={userName}
-                      onChange={(e) => setUserName(e.target.value)}
+                      onChange={(e)=>setUserName(e.target.value)}
                       type="text"
                       className="form-control"
                       id="login-username"

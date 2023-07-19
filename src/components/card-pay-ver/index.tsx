@@ -21,12 +21,8 @@ const CardPayVer = (props: CardPayVerProps) => {
         <>
             <main>
 
-
-
-
                 {/* <!-- PAYMENT PAGE --> */}
                 <section className="payment-page">
-
 
                     {/* <!-- Steps Wrapper --> */}
                     <div className="steps-wrapper d-md-block d-none">
@@ -51,13 +47,10 @@ const CardPayVer = (props: CardPayVerProps) => {
                     </div>
 
 
-
                     <div className="container">
-
 
                         {/* <!-- Payment-Main Wrapper --> */}
                         <div className="payment-main-wrapper mx-auto">
-
 
                             {/* <!-- Payment Header --> */}
                             <div className="payment-header d-flex align-items-center">
@@ -121,7 +114,6 @@ const CardPayVer = (props: CardPayVerProps) => {
                             </div>
 
 
-
                             {/* <!-- Payment Form Wrapper --> */}
                             <div className="basic-container payment-form-wrap">
 
@@ -182,8 +174,6 @@ const CardPayVer = (props: CardPayVerProps) => {
                         </div>
 
                     </div>
-
-
 
                 </section>
             </main>

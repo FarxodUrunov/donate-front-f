@@ -1,22 +1,34 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const LeftMenuLayout = ({ children }: any) => {
 
     const {pathname} = useRouter()
-    const [menuLeft, setMenuLeft] = useState('0px')
+    const [menuLeft, setMenuLeft] = useState('-350px')
+    const [width, setWidth] = useState(0)
 
+    const handleResize = () => setWidth(window.innerWidth)
+    
     function openNav() {
         setMenuLeft('0')
-        // document.getElementById("sidebar").style.left = "0";
     }
 
     function closeNav() {
         setMenuLeft('-350px')
-        // document.getElementById("sidebar").style.left = "-350px";
     }
+    
+    useEffect(() => {
+        handleResize()
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+
+    useEffect(() => {
+        width <= 992 ? setMenuLeft('-350px') : setMenuLeft('0')
+    },[width])
+
     return (
       <>
             <header className="single-header">
@@ -56,7 +68,6 @@ const LeftMenuLayout = ({ children }: any) => {
 
                     <div className="row">
 
-
                         <div className="col-lg-3">
 
                             {/* <!-- Sidebar Main --> */}
@@ -64,13 +75,13 @@ const LeftMenuLayout = ({ children }: any) => {
 
                                 {/* <!-- Close Sidebar Button --> */}
                                 <div className="close-sidebar-btn">
-                                    <a href="javascript:void(0)" className="d-lg-none"
+                                    <button className="d-lg-none border-0 bg-transparent px-0"
                                         onClick={closeNav}
                                     >
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height={26} width={26} viewBox="0 0 384 512">
                                             <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
                                         </svg>
-                                    </a>
+                                    </button>
                                 </div>
 
                                 {/* <!-- User Info --> */}
@@ -106,7 +117,7 @@ const LeftMenuLayout = ({ children }: any) => {
                                             </li>
 
                                             <li>
-                                                <Link href="login"><Image width={30} height={30} src="/images/sign-out-icon.png" alt="Sign out" />Sign out</Link>
+                                                <Link href="/"><Image width={30} height={30} src="/images/sign-out-icon.png" alt="Sign out" />Sign out</Link>
                                             </li>
 
                                         </ul>

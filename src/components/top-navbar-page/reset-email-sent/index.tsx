@@ -14,7 +14,7 @@ const ResetEmailSent = () => {
                           <div className="d-flex justify-content-between align-items-center mb-lg-4 mb-3">
                               <h1>Password Reset</h1>
                               <div>
-                                  <Link href="login">Back to Log-in</Link>
+                                  <Link href="/">Back to Log-in</Link>
                               </div>
                           </div>
                           <div className="form-help-text">
@@ -35,7 +35,7 @@ const ResetEmailSent = () => {
                           </div>
                           {/* Next Button */}
                           <div>
-                              <Link href="login" className="btn btn-primary w-100">Back to Log-in</Link>
+                              <Link href="/" className="btn btn-primary w-100">Back to Log-in</Link>
                           </div>
                           {/* Forgot Email? */}
                           <div className="text-center mt-3">

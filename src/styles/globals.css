@@ -137,7 +137,7 @@ a {
 /* LOGO */
 .navbar .navbar-brand>img {
     text-decoration: none;
-    max-width: 200px;
+    /* max-width: 200px; */
 }
 
 /* Navbar Link  */
@@ -203,7 +203,7 @@ a {
 /* Header Logo */
 .light-header .logo>img {
     text-decoration: none;
-    max-width: 200px;
+    /* max-width: 200px; */
 }
 
 
@@ -223,7 +223,7 @@ a {
 /* Header Logo */
 .single-header .logo>img {
     text-decoration: none;
-    max-width: 200px;
+    /* max-width: 200px; */
 }
 
 
@@ -232,7 +232,7 @@ a {
  ===================== */
 .auth-wrapper {
     background-color: #fff;
-    background-image: url(/images/auth-bg.jpg);
+    background-image: url(/images/auth-bg.webp);
     min-height: 100vh;
     background-position: center;
     background-size: cover;
@@ -263,7 +263,7 @@ a {
     z-index: 0;
     clip-path: circle(70% at 80% 50%);
     background-color: #fff;
-    background-image: url(/images/Layers.png);
+    /* background-image: url(/images/Layers.png); */
 }
 
 
@@ -3476,7 +3476,7 @@ a {
 }
 
 .join-form-wrapper .form-logo {
-    width: 140px;
+    /* width: 140px; */
 }
 
 .join-form-wrapper h1 {

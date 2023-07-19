@@ -57,7 +57,7 @@ const TopMenuLayout = ({ children }: any) => {
                                 </li>
                                 {/* Sign out */}
                                 <li className="nav-item">
-                                    <Link className="nav-link" href="login">
+                                    <Link className="nav-link" href="/">
                                         Sign out
                                     </Link>
                                 </li>

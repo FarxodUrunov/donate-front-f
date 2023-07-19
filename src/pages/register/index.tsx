@@ -44,7 +44,7 @@ const Register = () => {
 
                                     {/* <!-- Buttons --> */}
                                     <div className="form-switch-btns">
-                                        <Link href="login" className="btn btn-primary">Login</Link>
+                                        <Link href="/" className="btn btn-primary">Login</Link>
                                         <Link href="register" className="btn btn-primary ms-2 active">Register</Link>
                                     </div>
 

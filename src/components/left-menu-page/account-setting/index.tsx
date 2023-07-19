@@ -1,13 +1,14 @@
-import LeftMenu from "@/components/layout/left-menu"
 import Link from "next/link"
 import { useState } from "react"
-import { Button, Modal } from "react-bootstrap"
+import { Modal } from "react-bootstrap"
 
 const AccountSetting = () => {
-    const [menuLeft, setMenuLeft] = useState('-350px')
     const [showName, setShowName] = useState(false);
     const [showEmail, setShowEmail] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
+    const [passwordEmailText, setPasswordEmailText] = useState(false)
+    const [passwordTextCurrent, setPasswordTextCurrent] = useState(false)
+    const [passwordTextNew, setPasswordTextNew] = useState(false)
 
     const handleClose = (str: string) => {
         if (str === "name") setShowName(false)
@@ -20,15 +21,16 @@ const AccountSetting = () => {
         if (str === "password") setShowPassword(true)
     }
 
-    function openNav() {
-        setMenuLeft('0')
-        // document.getElementById("sidebar").style.left = "0";
+    const togglePassword = () => {
+        passwordEmailText ? setPasswordEmailText(false) : setPasswordEmailText(true)
+    }
+    const toggleCurrentPassword = () => {
+        passwordTextCurrent ? setPasswordTextCurrent(false) : setPasswordTextCurrent(true)
+    }
+    const toggleNewPassword = () => {
+        passwordTextNew ? setPasswordTextNew(false) : setPasswordTextNew(true)
     }
 
-    function closeNav() {
-        setMenuLeft('-350px')
-        // document.getElementById("sidebar").style.left = "-350px";
-    }
     return (
         <>
 
@@ -77,7 +79,6 @@ const AccountSetting = () => {
                 <div className="delete-ac-section">
                     <h3>
                         <Link href="delete-account">Delete Account
-                            {/* <i className="fa-solid fa-trash-can text-muted ms-2"></i> */}
                             <svg className="fa-solid fa-trash-can text-muted ms-3 mb-1" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 448 512">
                                 <path fill="rgb(34 38 42 / 75%)" d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm96 64c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16z" />
                             </svg>
@@ -86,13 +87,7 @@ const AccountSetting = () => {
                     <p>This account will no longer be available, and all your saved data will be permanently deleted.</p>
                 </div>
 
-
             </main>
-
-
-
-
-
 
             {/* <!-- ==================================== */}
             {/* # MODALS/POPUPS  Starts */}
@@ -156,12 +151,10 @@ const AccountSetting = () => {
                         </div>
                         <div>
                             <div className="input-group">
-                                <input className="form-control" id="EmaiUpdatePassword" type="password" placeholder="For security, please confirm your password" required />
-                                <span className="input-group-text UpdateEmail-password-toggle"
-                                //   onClick={EmaiUpdatePassword('EmaiUpdatePassword')}
-                                >
+                                <input className="form-control" id="EmaiUpdatePassword" type={!passwordEmailText ? "password" : "text"} placeholder="For security, please confirm your password" required />
+                                <span onClick={togglePassword} className="input-group-text UpdateEmail-password-toggle" >
                                     {
-                                        true ?
+                                        !passwordEmailText ?
                                             <svg xmlns="http://www.w3.org/2000/svg" height={16} width={18} viewBox="0 0 576 512">
                                                 <path fill="currentColor" d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z" />
                                             </svg>
@@ -177,8 +170,6 @@ const AccountSetting = () => {
                     </Modal.Body>
                     <Modal.Footer>
                         <button onClick={() => handleClose("email")} type="button" className="btn btn-link">Cancel</button>
-
-                        {/* <!-- Submit Button --> */}
                         <button onClick={() => handleClose("email")} type="submit" className="btn btn-primary">Update</button>
                     </Modal.Footer>
                 </form>
@@ -203,12 +194,10 @@ const AccountSetting = () => {
                 <form>
                     <Modal.Body>
                         <div className="input-group mb-3">
-                            <input className="form-control" id="currentPassword" type="password" placeholder="Current Password" required />
-                            <span className="input-group-text password-toggle-current"
-                            //   onClick="toggleCurrentPassword('currentPassword')"
-                            >
+                            <input className="form-control" id="currentPassword" type={!passwordTextCurrent ? "password" : "text"} placeholder="Current Password" required />
+                            <span onClick={toggleCurrentPassword} className="input-group-text password-toggle-current">
                                 {
-                                    true ?
+                                    !passwordTextCurrent ?
                                         <svg xmlns="http://www.w3.org/2000/svg" height={16} width={18} viewBox="0 0 576 512">
                                             <path fill="currentColor" d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z" />
                                         </svg>
@@ -222,12 +211,10 @@ const AccountSetting = () => {
 
                         {/* <!-- New Password Input --> */}
                         <div className="input-group">
-                            <input className="form-control" id="newPassword" type="password" placeholder="New Password" required />
-                            <span className="input-group-text password-toggle-new"
-                            //   onclick="toggleNewPassword('newPassword')"
-                            >
+                            <input className="form-control" id="newPassword" type={!passwordTextNew ? "password" : "text"} placeholder="New Password" required />
+                            <span onClick={toggleNewPassword} className="input-group-text password-toggle-new">
                                 {
-                                    true ?
+                                    !passwordTextNew ?
                                         <svg xmlns="http://www.w3.org/2000/svg" height={16} width={18} viewBox="0 0 576 512">
                                             <path fill="currentColor" d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z" />
                                         </svg>

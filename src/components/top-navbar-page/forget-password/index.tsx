@@ -16,7 +16,7 @@ const ForgetPassword = () => {
                               <div className="d-flex justify-content-between align-items-center mb-lg-4 mb-3">
                                   <h1>Forgot Password?</h1>
                                   <div>
-                                      <Link href="login">Back to Log-in</Link>
+                                      <Link href="/">Back to Log-in</Link>
                                   </div>
                               </div>
                               <div className="form-help-text">

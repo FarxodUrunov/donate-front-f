@@ -43,7 +43,7 @@ const ResetPassword = () => {
                           <div className="d-flex justify-content-between align-items-center mb-4">
                               <h1>Reset password</h1>
                               <div>
-                                  <a href="login.html">Back to Log-in</a>
+                                  <a href="/">Back to Log-in</a>
                               </div>
                           </div>
                           {/* Form */}
